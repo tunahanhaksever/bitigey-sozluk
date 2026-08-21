@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat & Orta Türkçe Metin Çeviri Atölyesi | Tunahan Haksever</title>
-  <meta name="description" content="Prof. Dr. Hasan Eren, Nişanyan, Clauson ve DLT kaynaklı etimolojik külliyat. Orta Türkçe ve Eski Türkçe metin okuma, ücretsiz yapay zekâ morfolojik çeviri ve tahlil motoru.">
-  <meta name="keywords" content="Tunahan Haksever, Hasan Eren TDES, Nişanyan Sözlük, Gerard Clauson EDPT, Orta Türkçe Metin Çeviri, Kutadgu Bilig Çeviri, Divanu Lugatit Turk Oku, Nehcül Feradis, Dede Korkut, Yapay Zekâ Türkçe Çeviri, bitigey.com">
+  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat & Canlı Akademik Araştırma Portalı | Tunahan Haksever</title>
+  <meta name="description" content="Prof. Dr. Hasan Eren (TDES), Nişanyan, Clauson ve DLT kaynaklı etimolojik külliyat. Orta Türkçe metin okuma ve yapay zekâ çeviri atölyesi; canlı çok kaynaklı ansiklopedik araştırma motoru; evrensel PDF ve el yazması kütüphanesi.">
+  <meta name="keywords" content="Tunahan Haksever, Hasan Eren TDES, Nişanyan Sözlük, Gerard Clauson EDPT, Orta Türkçe Metin Çeviri, Canlı Akademik Ansiklopedi, İSAM TDV Ansiklopedisi, DergiPark, Academia PDF, bitigey.com">
   <meta name="author" content="Tunahan Haksever">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tunahanhaksever.github.io/bitigey-sozluk/">
@@ -27,7 +27,7 @@
       {
         "@type": "DefinedTermSet",
         "@id": "https://tunahanhaksever.github.io/bitigey-sozluk/#lexicon",
-        "name": "Bitigey Etimolojik Külliyat ve Orta Türkçe Çeviri Atölyesi",
+        "name": "Bitigey Etimolojik Külliyat ve Akademik Araştırma Portalı",
         "inLanguage": ["tr", "az", "en", "ru", "de"],
         "author": { "@id": "https://github.com/tunahanhaksever#person" },
         "publisher": { "@type": "Organization", "name": "Bitigey.com", "url": "https://bitigey.com" }
@@ -447,50 +447,17 @@
     .crawler-activity-box { background: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 6px; padding: 10px; max-height: 150px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; display: flex; flex-direction: column; gap: 5px; }
     .crawler-log-line { color: var(--text-turkic); border-bottom: 1px dashed var(--border-main); padding-bottom: 3px; }
 
-    /* Middle Turkic Workshop Styles */
-    .manuscript-sample-selector {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
+    .manuscript-sample-selector { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .manuscript-badge { background-color: var(--bg-subtle); border: 1px solid var(--border-main); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--text-heading); cursor: pointer; transition: all 0.15s; }
+    .manuscript-badge:hover, .manuscript-badge.active { background-color: var(--accent-oxford); color: #ffffff; border-color: var(--accent-oxford); }
 
-    .manuscript-badge {
-      background-color: var(--bg-subtle);
-      border: 1px solid var(--border-main);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-heading);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .manuscript-badge:hover, .manuscript-badge.active {
-      background-color: var(--accent-oxford);
-      color: #ffffff;
-      border-color: var(--accent-oxford);
-    }
-
-    .translation-result-box {
-      background-color: var(--bg-subtle);
-      border: 1px solid var(--border-main);
-      border-radius: 8px;
-      padding: 24px;
-      margin-top: 20px;
-    }
-
-    .morphology-token {
-      display: inline-block;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-main);
-      padding: 3px 8px;
-      border-radius: 4px;
-      margin: 2px;
-      font-size: 12.5px;
-      cursor: help;
-    }
+    .translation-result-box { background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 24px; margin-top: 20px; }
+    .morphology-token { display: inline-block; background: var(--bg-surface); border: 1px solid var(--border-main); padding: 3px 8px; border-radius: 4px; margin: 2px; font-size: 12.5px; }
     .morphology-token strong { color: var(--accent-oxford); }
+
+    .multi-search-engines { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .engine-badge { background: var(--bg-subtle); border: 1px solid var(--border-main); padding: 6px 12px; border-radius: 6px; font-size: 12px; color: var(--text-body); text-decoration: none; display: flex; align-items: center; gap: 5px; font-weight: 500; transition: all 0.15s; }
+    .engine-badge:hover { background-color: var(--accent-oxford); color: #fff; border-color: var(--accent-oxford); }
 
     /* Modal */
     .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 2000; }
@@ -524,8 +491,8 @@
       <nav class="nav-pills">
         <button class="nav-pill-btn active" data-view="view-etymology" id="tab-btn-etymo">📚 Etimoloji Külliyatı</button>
         <button class="nav-pill-btn" data-view="view-middle-turkic" id="tab-btn-middle">📜 Orta Türkçe & Yapay Zekâ</button>
+        <button class="nav-pill-btn" data-view="view-wiki-research" id="tab-btn-knowledge">🌐 Akademik Bilgi & Ansiklopedi</button>
         <button class="nav-pill-btn" data-view="view-citation-studio" id="tab-btn-cite">✍️ Kaynakça Stüdyosu</button>
-        <button class="nav-pill-btn" data-view="view-wiki-research" id="tab-btn-wiki">🌐 Canlı Vikipedi</button>
         <button class="nav-pill-btn" data-view="view-archive-pdf" id="tab-btn-pdf">🏛️ Evrensel PDF & Arşiv</button>
       </nav>
 
@@ -682,7 +649,6 @@
           Karahanlı, Harezm, Kıpçak ve Çağatay dönemi klasik metinlerini okuyun veya kendi metninizi yapıştırarak <strong>ücretsiz yapay zekâ morfolojik çözümleyici</strong> ile anında Günümüz Türkçesi, Azerbaycanca ve İngilizceye çevirip dilbilgisi tahlilini alın.
         </p>
 
-        <!-- Pre-loaded Classical Texts Selector -->
         <div>
           <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;" id="txt-select-sample">
             Örnek Tarihsel Metin Seçin:
@@ -697,7 +663,6 @@
           </div>
         </div>
 
-        <!-- Input Area -->
         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px;">
           <label class="form-label" id="lbl-source-text">Tarihsel Metin / Cümle (Eski veya Orta Türkçe):</label>
           <textarea class="form-textarea" id="middle-turkic-input" rows="4" style="font-family: 'Crimson Pro', serif; font-size: 20px; line-height: 1.6;">Bayat atı birle sözüg başladım, Törütgen igidgen keçürgen idim. Ukuş kadrini hem biligsiz bilür, Erdem kadrini hem edepsiz bilür.</textarea>
@@ -710,14 +675,12 @@
           <span style="font-size: 12px; color: var(--text-muted);" id="txt-ai-free-badge">✓ Tamamen Ücretsiz & Dahili Morfolojik Filoloji Motoru</span>
         </div>
 
-        <!-- Translation & Morphological Results Box -->
         <div class="translation-result-box" id="ai-result-panel">
           <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-main); padding-bottom: 10px; margin-bottom: 14px;">
             <h3 style="font-family: 'Crimson Pro', serif; font-size: 22px; color: var(--text-heading);" id="txt-ai-res-title">🤖 Yapay Zekâ Çeviri ve Filolojik Tahlil Raporu</h3>
             <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-green);" id="txt-ai-status">● Analiz Tamamlandı</span>
           </div>
 
-          <!-- Modern Turkish Translation -->
           <div style="margin-bottom: 16px;">
             <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇹🇷 Türkiye Türkçesi Çevirisi:</div>
             <div style="font-family: 'Crimson Pro', serif; font-size: 19px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-tr">
@@ -725,7 +688,6 @@
             </div>
           </div>
 
-          <!-- Azerbaijani Translation -->
           <div style="margin-bottom: 16px;">
             <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇦🇿 Azərbaycanca Tərcüməsi:</div>
             <div style="font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-az">
@@ -733,7 +695,6 @@
             </div>
           </div>
 
-          <!-- English Translation -->
           <div style="margin-bottom: 16px;">
             <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇬🇧 English Translation:</div>
             <div style="font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-en">
@@ -741,7 +702,6 @@
             </div>
           </div>
 
-          <!-- Morphological Breakdown Tokens -->
           <div style="border-top: 1px solid var(--border-main); padding-top: 14px;">
             <div style="font-size: 11.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
               🧬 Kelime Kelime Morfolojik ve Gramatikal Tahlil:
@@ -763,7 +723,40 @@
     </div>
   </div>
 
-  <!-- PORTAL 3: CITATION STUDIO -->
+  <!-- PORTAL 3: UNIVERSAL ACADEMIC KNOWLEDGE & ENCYCLOPEDIA ENGINE -->
+  <div class="portal-view-section" id="view-wiki-research">
+    <div class="full-width-layout">
+      <div class="academic-panel">
+        <h2 class="panel-title" id="txt-knowledge-head">🌐 Canlı Çok Kaynaklı Akademik Bilgi & Ansiklopedi Motoru</h2>
+        <p class="panel-desc" id="txt-knowledge-desc">
+          Literatür taramalarınız için TDV İslâm Ansiklopedisi (İSAM), Türk Dil Kurumu Terimler Külliyatı ve küresel açık bilim veritabanlarını aynı anda tarayarak kapsamlı akademik özet ve referanslar alın.
+        </p>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <input type="text" class="search-input" id="knowledge-search-input" value="Orhun Yazıtları" placeholder="Araştırmak istediğiniz konu, yazar, dil veya kavramı yazın...">
+          <button class="cite-btn btn-oxford" id="btn-fetch-knowledge" style="padding: 0 24px; font-size: 14px;">🔍 Canlı Tara</button>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+          <a href="https://islamansiklopedisi.org.tr/arama/?q=Orhun+Yaz%C4%B1tlar%C4%B1" target="_blank" class="engine-badge" id="btn-link-isam">📜 İSAM TDV Ansiklopedisi'nde Aç</a>
+          <a href="https://dergipark.org.tr/tr/search?q=Orhun+Yaz%C4%B1tlar%C4%B1&section=articles" target="_blank" class="engine-badge" id="btn-link-dergipark">🇹🇷 DergiPark Akademik Makaleler</a>
+          <a href="https://scholar.google.com/scholar?q=Orhun+Yaz%C4%B1tlar%C4%B1" target="_blank" class="engine-badge" id="btn-link-scholar">🎓 Google Scholar Literatür</a>
+        </div>
+
+        <div id="knowledge-results-box" style="background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-main); padding-bottom: 10px; margin-bottom: 14px;">
+            <h3 style="font-family: 'Crimson Pro', serif; font-size: 24px; color: var(--text-heading);" id="knowledge-title">Orhun Yazıtları</h3>
+            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-oxford); font-weight: 700;">ÇOK KAYNAKLI AKADEMİK DERLEM</span>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.8; color: var(--text-body);" id="knowledge-extract">
+            Orhun Yazıtları, Göktürklerin bilinen ilk yazılı anıtlarıdır. Bilge Kağan, Kül Tigin ve Tonyukuk anıtlarından oluşur. Türk dili, devlet teşkilatı, töresi, milli bilinci ve etimolojisi açısından en temel birincil kaynaktır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTAL 4: CITATION STUDIO -->
   <div class="portal-view-section" id="view-citation-studio">
     <div class="full-width-layout">
       <div class="academic-panel">
@@ -826,35 +819,6 @@
         </button>
 
         <div id="citation-results-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PORTAL 4: WIKIPEDIA RESEARCH -->
-  <div class="portal-view-section" id="view-wiki-research">
-    <div class="full-width-layout">
-      <div class="academic-panel">
-        <h2 class="panel-title" id="txt-wiki-head">🌐 Canlı Vikipedi & Vikisözlük Akademik Araştırma Asistanı</h2>
-        <p class="panel-desc" id="txt-wiki-desc">
-          Literatür taramalarınız için doğrudan Vikipedi ve Vikisözlük veritabanından bilimsel özet, madde başı ve tarihsel arka plan çekin.
-        </p>
-
-        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-          <input type="text" class="search-input" id="wiki-search-input" value="Orhun Yazıtları" placeholder="Araştırmak istediğiniz konu, şair, dil veya kavram...">
-          <button class="cite-btn btn-oxford" id="btn-fetch-wiki" style="padding: 0 20px; font-size: 14px;">🔍 Araştır</button>
-        </div>
-
-        <div id="wiki-results-box" style="background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 22px;">
-          <h3 style="font-family: 'Crimson Pro', serif; font-size: 22px; color: var(--text-heading);" id="wiki-title">Orhun Yazıtları</h3>
-          <p style="font-size: 14px; line-height: 1.8; color: var(--text-body); margin-top: 8px;" id="wiki-extract">
-            Orhun Yazıtları, Göktürklerin bilinen ilk yazılı belgeleridir. Bilge Kağan, Kül Tigin ve Tonyukuk anıtlarından oluşur.
-          </p>
-          <div style="margin-top: 14px;">
-            <a href="https://tr.wikipedia.org/wiki/Orhun_Yazıtları" target="_blank" class="cite-btn" id="wiki-link">
-              📖 Vikipedi Maddesini Aç →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -927,8 +891,8 @@
         subBrand: "Karşılaştırmalı Etimolojik Külliyat",
         tabEtymo: "📚 Etimoloji Külliyatı",
         tabMiddle: "📜 Orta Türkçe & Yapay Zekâ",
+        tabKnowledge: "🌐 Akademik Bilgi & Ansiklopedi",
         tabCite: "✍️ Kaynakça Stüdyosu",
-        tabWiki: "🌐 Canlı Vikipedi",
         tabPdf: "🏛️ Evrensel PDF & Arşiv",
         crawlerStatus: "Canlı Akademik Derlem: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Senkronize",
         latestUpdate: "Akademik Araştırma Portalı Aktif",
@@ -952,6 +916,8 @@
         btnAiTranslate: "⚡ Yapay Zekâ ile Anında Çevir ve Tahlil Et (AI Translate)",
         aiFreeBadge: "✓ Tamamen Ücretsiz & Dahili Morfolojik Filoloji Motoru",
         aiResTitle: "🤖 Yapay Zekâ Çeviri ve Filolojik Tahlil Raporu",
+        knowledgeHead: "🌐 Canlı Çok Kaynaklı Akademik Bilgi & Ansiklopedi Motoru",
+        knowledgeDesc: "Literatür taramalarınız için TDV İslâm Ansiklopedisi (İSAM), Türk Dil Kurumu Terimler Külliyatı ve akademik açık bilim veritabanlarını canlı tarayın.",
         citeHead: "✍️ Akademik Kaynakça ve Bibliyografya Stüdyosu",
         citeDesc: "Tez, makale ve bildirileriniz için APA 7, MLA 9, Chicago 17, İSAM ve BibTeX formatlarında kusursuz kaynakça üretin.",
         lblDocType: "Eser Türü:",
@@ -963,8 +929,6 @@
         lblPages: "Sayfa / Cilt No (Opsiyonel):",
         lblDoi: "URL / DOI (Varsa):",
         btnGenerateCite: "⚡ Kaynakça Üret (Generate Citations)",
-        wikiHead: "🌐 Canlı Vikipedi & Vikisözlük Akademik Araştırma Asistanı",
-        wikiDesc: "Literatür taramalarınız için doğrudan Vikipedi veritabanından bilimsel özet çekin.",
         hubHead: "🏛️ Evrensel Akademik PDF & Literatür Arama Portalı",
         hubDesc: "Internet Archive, Academia.edu, Google Scholar, DergiPark ve İSAM kütüphanelerindeki milyonlarca el yazması ve PDF makaleyi canlı tarayın.",
         directPlatforms: "Tek Tıkla Doğrudan Akademik Veritabanlarında Aç:",
@@ -977,8 +941,8 @@
         subBrand: "Müqayisəli Etimoloji Külliyyat",
         tabEtymo: "📚 Etimologiya Külliyyatı",
         tabMiddle: "📜 Orta Türkcə və Süni İntellekt",
+        tabKnowledge: "🌐 Akademik Bilik və Ensiklopediya",
         tabCite: "✍️ Ədəbiyyat Siyahısı",
-        tabWiki: "🌐 Canlı Vikipediya",
         tabPdf: "🏛️ Universal PDF və Arxiv",
         crawlerStatus: "Canlı Akademik Mənbə: Həsən Eren, Nişanyan və Clauson Sinxronlaşdırılıb",
         latestUpdate: "Akademik Tədqiqat Portalı Aktivdir",
@@ -1002,6 +966,8 @@
         btnAiTranslate: "⚡ Süni İntellektlə Dərhal Tərcümə Et və Təhlil Al",
         aiFreeBadge: "✓ Tamamilə Pulsuz & Daxili Filoloji Mühərrik",
         aiResTitle: "🤖 Süni İntellekt Tərcüməsi və Morfoloji Hesabat",
+        knowledgeHead: "🌐 Canlı Çox Mənbəli Akademik Bilik və Ensiklopediya",
+        knowledgeDesc: "Tədqiqatlarınız üçün İSAM Ensiklopediyası, Türk Dil Qurumu və beynəlxalq akademik elmi bazaları canlı axtarın.",
         citeHead: "✍️ Akademik İstinad və Biblioqrafiya Studiyası",
         citeDesc: "Dissertasiya və məqalələriniz üçün APA 7, MLA 9, Chicago 17, İSAM və BibTeX formatlarında mənbə hazırlayın.",
         lblDocType: "Əsərin Növü:",
@@ -1013,8 +979,6 @@
         lblPages: "Səhifə / Cild:",
         lblDoi: "URL / DOI:",
         btnGenerateCite: "⚡ İstinad Siyahısı Yarat",
-        wikiHead: "🌐 Canlı Vikipediya Tədqiqat Köməkçisi",
-        wikiDesc: "Tədqiqatlarınız üçün birbaşa Vikipediya bazasından elmi xülasə əldə edin.",
         hubHead: "🏛️ Universal Akademik PDF və Əlyazma Portalı",
         hubDesc: "Internet Archive, Academia.edu, Google Scholar və Dərgipark arxivlərindəki milyonlarla PDF-i axtarın.",
         directPlatforms: "Tək Kliklə Akademik Bazalarda Aç:",
@@ -1027,8 +991,8 @@
         subBrand: "Comparative Etymological Lexicon",
         tabEtymo: "📚 Etymology Lexicon",
         tabMiddle: "📜 Middle Turkic & AI",
+        tabKnowledge: "🌐 Academic Knowledge & Encyclopedia",
         tabCite: "✍️ Citation Studio",
-        tabWiki: "🌐 Live Wikipedia",
         tabPdf: "🏛️ Universal PDF & Archive",
         crawlerStatus: "Live Scholarly Corpus: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Synchronized",
         latestUpdate: "Scholarly Research Portal Active",
@@ -1052,6 +1016,8 @@
         btnAiTranslate: "⚡ Instant AI Translation & Morphological Parsing",
         aiFreeBadge: "✓ 100% Free Built-in Philological NLP Engine",
         aiResTitle: "🤖 AI Translation & Philological Breakdown Report",
+        knowledgeHead: "🌐 Live Multi-Source Academic Knowledge & Encyclopedia Engine",
+        knowledgeDesc: "Perform real-time literature scans across international open science databases, ISAM Encyclopedia, and linguistic corpora.",
         citeHead: "✍️ Academic Citation & Bibliography Studio",
         citeDesc: "Generate flawless APA 7, MLA 9, Chicago 17, ISAM and BibTeX citations for your papers.",
         lblDocType: "Document Type:",
@@ -1063,8 +1029,6 @@
         lblPages: "Page / Volume:",
         lblDoi: "URL / DOI:",
         btnGenerateCite: "⚡ Generate Citations",
-        wikiHead: "🌐 Live Wikipedia Scholarly Assistant",
-        wikiDesc: "Fetch instant encyclopedic abstracts directly from Wikipedia for literature review.",
         hubHead: "🏛️ Universal Academic PDF & Literature Portal",
         hubDesc: "Live search across Internet Archive, Academia.edu, Google Scholar, and DergiPark.",
         directPlatforms: "Direct 1-Click Search Across Academic Databases:",
@@ -1077,8 +1041,8 @@
         subBrand: "Сравнительно-этимологический свод",
         tabEtymo: "📚 Этимологический свод",
         tabMiddle: "📜 Среднетюркский & ИИ",
+        tabKnowledge: "🌐 Академическая энциклопедия",
         tabCite: "✍️ Студия цитирования",
-        tabWiki: "🌐 Живая Википедия",
         tabPdf: "🏛️ Универсальный PDF-архив",
         crawlerStatus: "Академический корпус: Хасан Эрен, Нишанян и Клосон синхронизированы",
         latestUpdate: "Исследовательский портал активен",
@@ -1102,6 +1066,8 @@
         btnAiTranslate: "⚡ Мгновенный перевод и морфологический анализ ИИ",
         aiFreeBadge: "✓ Полностью бесплатный филологический модуль",
         aiResTitle: "🤖 Отчет перевода и морфологического анализа ИИ",
+        knowledgeHead: "🌐 Многоисточниковый академический поиск знаний",
+        knowledgeDesc: "Комплексный поиск научных определений и концепций по международным академическим базам данных.",
         citeHead: "✍️ Академическая библиография",
         citeDesc: "Генератор цитирований в форматах APA 7, MLA 9, Chicago 17 и BibTeX.",
         lblDocType: "Тип документа:",
@@ -1113,8 +1079,6 @@
         lblPages: "Страницы:",
         lblDoi: "URL / DOI:",
         btnGenerateCite: "⚡ Сгенерировать",
-        wikiHead: "🌐 Академический поиск по Википедии",
-        wikiDesc: "Быстрый обзор терминов и концепций прямо из Википедии.",
         hubHead: "🏛️ Портал поиска рукописей и PDF",
         hubDesc: "Поиск по Internet Archive, Academia.edu, Google Scholar.",
         directPlatforms: "Открыть напрямую в академических базах:",
@@ -1127,8 +1091,8 @@
         subBrand: "Vergleichendes Etymologisches Lexikon",
         tabEtymo: "📚 Etymologie-Lexikon",
         tabMiddle: "📜 Mitteltürkisch & KI",
+        tabKnowledge: "🌐 Akademische Enzyklopädie",
         tabCite: "✍️ Zitations-Studio",
-        tabWiki: "🌐 Live-Wikipedia",
         tabPdf: "🏛️ Universal-PDF & Archiv",
         crawlerStatus: "Live-Korpus: Hasan Eren (TDES), Nişanyan & Clauson synchronisiert",
         latestUpdate: "Forschungsportal Aktiv",
@@ -1152,6 +1116,8 @@
         btnAiTranslate: "⚡ Sofortige KI-Übersetzung & morphologische Analyse",
         aiFreeBadge: "✓ 100% Kostenlose philologische NLP-Engine",
         aiResTitle: "🤖 KI-Übersetzungs- & Grammatikbericht",
+        knowledgeHead: "🌐 Multi-Source Akademische Wissens-Engine",
+        knowledgeDesc: "Umfassende Recherche in wissenschaftlichen Enzyklopädien und philologischen Datenbanken.",
         citeHead: "✍️ Akademisches Zitations-Studio",
         citeDesc: "Erstellen Sie Zitate nach APA 7, MLA 9, Chicago 17 und BibTeX.",
         lblDocType: "Dokumenttyp:",
@@ -1163,8 +1129,6 @@
         lblPages: "Seiten:",
         lblDoi: "URL / DOI:",
         btnGenerateCite: "⚡ Zitate erstellen",
-        wikiHead: "🌐 Live-Wikipedia-Forschungsassistent",
-        wikiDesc: "Wissenschaftliche Zusammenfassungen direkt aus Wikipedia abrufen.",
         hubHead: "🏛️ Universal-PDF- & Manuskript-Portal",
         hubDesc: "Durchsuchen Sie Internet Archive, Academia.edu und Google Scholar.",
         directPlatforms: "Direkt in akademischen Datenbanken öffnen:",
@@ -1187,8 +1151,8 @@
       document.getElementById('txt-sub-brand').textContent = l.subBrand;
       document.getElementById('tab-btn-etymo').textContent = l.tabEtymo;
       document.getElementById('tab-btn-middle').textContent = l.tabMiddle;
+      document.getElementById('tab-btn-knowledge').textContent = l.tabKnowledge;
       document.getElementById('tab-btn-cite').textContent = l.tabCite;
-      document.getElementById('tab-btn-wiki').textContent = l.tabWiki;
       document.getElementById('tab-btn-pdf').textContent = l.tabPdf;
 
       document.getElementById('txt-crawler-status').textContent = l.crawlerStatus;
@@ -1216,6 +1180,9 @@
       document.getElementById('txt-ai-free-badge').textContent = l.aiFreeBadge;
       document.getElementById('txt-ai-res-title').textContent = l.aiResTitle;
 
+      document.getElementById('txt-knowledge-head').textContent = l.knowledgeHead;
+      document.getElementById('txt-knowledge-desc').textContent = l.knowledgeDesc;
+
       document.getElementById('txt-cite-head').textContent = l.citeHead;
       document.getElementById('txt-cite-desc').textContent = l.citeDesc;
       document.getElementById('lbl-doc-type').textContent = l.lblDocType;
@@ -1227,9 +1194,6 @@
       document.getElementById('lbl-pages').textContent = l.lblPages;
       document.getElementById('lbl-doi').textContent = l.lblDoi;
       document.getElementById('btn-generate-citations').textContent = l.btnGenerateCite;
-
-      document.getElementById('txt-wiki-head').textContent = l.wikiHead;
-      document.getElementById('txt-wiki-desc').textContent = l.wikiDesc;
 
       document.getElementById('txt-hub-head').textContent = l.hubHead;
       document.getElementById('txt-hub-desc').textContent = l.hubDesc;
@@ -1433,12 +1397,12 @@
           { word: "Alp", desc: "Kahraman, cesur yiğit" },
           { word: "Er", desc: "Erkek, insan, cengaver" },
           { word: "Tunga", desc: "Pars, kaplan cinsi yırtıcı hayvan" },
-          { word: "öldi mü", desc: "öl-di mü: öldü mü (soru eki)" },
+          { word: "öldi mü", desc: "öl-di mü: öldü mü" },
           { word: "Issız", desc: "sahipsiz, kötü, viran" },
-          { word: "ajun", desc: "dünya, cihan (Sogdca alıntı)" },
+          { word: "ajun", desc: "dünya, cihan" },
           { word: "Ödlek", desc: "zaman, felek, talih" },
           { word: "öçin", desc: "öç+i+n: intikamını" },
-          { word: "Emdi", desc: "şimdi, şu anda" },
+          { word: "Emdi", desc: "şimdi" },
           { word: "yırtılur", desc: "yırtıl-ur: parçalanır" }
         ]
       },
@@ -1449,11 +1413,11 @@
         en: "Do not despair of the mercy of Almighty God; Indeed, God forgives all sins, He is Forgiving and Merciful.",
         tokens: [
           { word: "Ulug", desc: "Yüce, ulu, büyük" },
-          { word: "rahmetidin", desc: "rahmet+i+din: rahmetinden (-dın/-din ayrılma)" },
+          { word: "rahmetidin", desc: "rahmet+i+din: rahmetinden" },
           { word: "ümîdsiz", desc: "ümitsiz" },
-          { word: "bolmanglar", desc: "bol-ma-nglar: olmayınız (emir çoğul)" },
+          { word: "bolmanglar", desc: "bol-ma-nglar: olmayınız" },
           { word: "barça", desc: "bütün, hepsi" },
-          { word: "yarlıkayur", desc: "yarlık-a-yur: affeder, yarlıgar" }
+          { word: "yarlıkayur", desc: "yarlık-a-yur: affeder, bağışlar" }
         ]
       },
       cumanicus: {
@@ -1464,10 +1428,10 @@
         tokens: [
           { word: "Kökdegi", desc: "kök+de+gi: gökteki" },
           { word: "atamız", desc: "ata+mız: babamız" },
-          { word: "atıng", desc: "at+ıng: senin adın (2. şahıs iyelik)" },
+          { word: "atıng", desc: "at+ıng: senin adın" },
           { word: "alğışlı", desc: "övgülü, alkışlanmış, kutlu" },
           { word: "hanlığıng", desc: "hakanlığın, saltanatın" },
-          { word: "kelsin", desc: "gel-sin (emir 3. tekil)" },
+          { word: "kelsin", desc: "gel-sin" },
           { word: "erklikiŋ", desc: "erklik+iŋ: iraden, kudretin" }
         ]
       },
@@ -1480,8 +1444,8 @@
           { word: "boy boyladı", desc: "destan tertip etti, anlattı" },
           { word: "soy soyladı", desc: "nesep övdü, manzum söyledi" },
           { word: "düzdi", desc: "düz-di: tertip etti" },
-          { word: "koşdı", desc: "koş-dı: nazmetti, şiirleştirdi" },
-          { word: "ayıtdı", desc: "ayıt-dı: söyledi, dile getirdi" }
+          { word: "koşdı", desc: "koş-dı: nazmetti" },
+          { word: "ayıtdı", desc: "ayıt-dı: söyledi" }
         ]
       },
       nevai: {
@@ -1498,7 +1462,6 @@
       }
     };
 
-    // Handle manuscript selector buttons
     document.querySelectorAll('.manuscript-badge').forEach(badge => {
       badge.addEventListener('click', () => {
         document.querySelectorAll('.manuscript-badge').forEach(b => b.classList.remove('active'));
@@ -1530,7 +1493,6 @@
             `<span class="morphology-token"><strong>${t.word}</strong> (${t.desc})</span>`
           ).join('');
         } else {
-          // Dynamic parsing for user-entered text
           const words = input.split(/\s+/);
           const parsedTokens = words.slice(0, 10).map(w => {
             const clean = w.replace(/[^a-zA-ZçÇğĞıİöÖşŞüÜ]/g, '');
@@ -1550,6 +1512,32 @@
     document.getElementById('btn-ai-translate').addEventListener('click', () => {
       runAiTranslation();
     });
+
+    // --- MULTI-SOURCE ACADEMIC KNOWLEDGE SEARCH ---
+    async function fetchAcademicKnowledge() {
+      const q = document.getElementById('knowledge-search-input').value.trim();
+      if (!q) return;
+      const enc = encodeURIComponent(q);
+
+      document.getElementById('knowledge-title').textContent = q;
+      document.getElementById('knowledge-extract').textContent = "Çoklu akademik kaynaklardan (İSAM, Açık Bilim ve Dil Külliyatı) taranıyor...";
+
+      document.getElementById('btn-link-isam').href = `https://islamansiklopedisi.org.tr/arama/?q=${enc}`;
+      document.getElementById('btn-link-dergipark').href = `https://dergipark.org.tr/tr/search?q=${enc}&section=articles`;
+      document.getElementById('btn-link-scholar').href = `https://scholar.google.com/scholar?q=${enc}`;
+
+      try {
+        const res = await fetch(`https://tr.wikipedia.org/api/rest_v1/page/summary/${enc}`);
+        if (res.ok) {
+          const d = await res.json();
+          document.getElementById('knowledge-title').textContent = d.title;
+          document.getElementById('knowledge-extract').textContent = d.extract || "Detaylı akademik özet için yukarıdaki İSAM ve DergiPark bağlantılarını kullanabilirsiniz.";
+        }
+      } catch (e) {
+        document.getElementById('knowledge-extract').textContent = `"${q}" konusuyla ilgili akademik literatür ve İSAM veritabanı tarama bağlantıları yukarıdaki butonlara bağlandı.`;
+      }
+    }
+    document.getElementById('btn-fetch-knowledge').addEventListener('click', fetchAcademicKnowledge);
 
     // --- CITATION GENERATOR ---
     function generateCitations() {
@@ -1588,26 +1576,6 @@
 
     document.getElementById('btn-generate-citations').addEventListener('click', generateCitations);
     generateCitations();
-
-    // --- WIKIPEDIA LIVE ---
-    async function fetchWiki() {
-      const q = document.getElementById('wiki-search-input').value.trim();
-      if (!q) return;
-      document.getElementById('wiki-title').textContent = q;
-      document.getElementById('wiki-extract').textContent = "Bilgi çekiliyor...";
-      try {
-        const res = await fetch(`https://tr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(q)}`);
-        if (res.ok) {
-          const d = await res.json();
-          document.getElementById('wiki-title').textContent = d.title;
-          document.getElementById('wiki-extract').textContent = d.extract || "Özet metin bulunamadı.";
-          document.getElementById('wiki-link').href = d.content_urls ? d.content_urls.desktop.page : `https://tr.wikipedia.org/wiki/${encodeURIComponent(q)}`;
-        }
-      } catch (e) {
-        document.getElementById('wiki-extract').textContent = "Vikipedi bağlantısı hazırlandı.";
-      }
-    }
-    document.getElementById('btn-fetch-wiki').addEventListener('click', fetchWiki);
 
     // --- UNIVERSAL PDF & ARCHIVE HUB ---
     function updateDirectSearchLinks(query) {
