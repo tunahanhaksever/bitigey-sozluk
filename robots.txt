@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tunahanhaksever.github.io/bitigey-sozluk/sitemap.xml
