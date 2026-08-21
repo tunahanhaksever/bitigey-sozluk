@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat | Hasan Eren, Nişanyan & Clauson</title>
-  <meta name="description" content="Prof. Dr. Hasan Eren, Sevan Nişanyan, Sir Gerard Clauson ve Dîvânu Lugâti't-Türk kaynaklarıyla karşılaştırmalı, A'dan Z'ye alfabetik dizinli ve canlı güncellenen akademik kökenbilim sözlüğü.">
-  <meta name="keywords" content="Tunahan Haksever, Hasan Eren Türk Dilinin Etimolojik Sözlüğü, Nişanyan Sözlük, Gerard Clauson EDPT, Divanu Lugatit Turk, Bitigey Sözlük, Etimoloji, Kökenbilim, Orhun Yazıtları, bitigey.com, Alfabetik Etimoloji">
+  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat & Akademik Araştırma Portalı | Tunahan Haksever</title>
+  <meta name="description" content="Prof. Dr. Hasan Eren (TDES), Nişanyan ve Clauson karşılaştırmalı etimoloji külliyatı; APA/MLA/Chicago/İSAM kaynakça ve bibliyografya üreticisi; canlı Vikipedi ve Internet Archive PDF/el yazması araştırma asistanı.">
+  <meta name="keywords" content="Tunahan Haksever, Hasan Eren Türk Dilinin Etimolojik Sözlüğü, Nişanyan Sözlük, Gerard Clauson EDPT, Kaynakça Nasıl Yazılır, APA 7 Kaynakça, MLA Kaynakça, İSAM Kaynak Gösterme, Bibliyografya Hazırlama, Internet Archive Kitap Arama, bitigey.com">
   <meta name="author" content="Tunahan Haksever">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tunahanhaksever.github.io/bitigey-sozluk/">
@@ -28,7 +28,7 @@
       {
         "@type": "DefinedTermSet",
         "@id": "https://tunahanhaksever.github.io/bitigey-sozluk/#lexicon",
-        "name": "Bitigey Etimolojik Külliyat (A-Z Dizinli)",
+        "name": "Bitigey Etimolojik Külliyat ve Akademik Araştırma Portalı",
         "inLanguage": ["tr", "az", "en", "ru", "de"],
         "author": {
           "@id": "https://github.com/tunahanhaksever#person"
@@ -96,7 +96,7 @@
       transition: background-color 0.2s, color 0.2s;
     }
 
-    /* Scholarly Academic Header */
+    /* Academic Header */
     header {
       background-color: var(--bg-surface);
       border-bottom: 1px solid var(--border-main);
@@ -125,18 +125,38 @@
       text-decoration: none;
     }
 
-    .brand-subtitle {
-      font-size: 12.5px;
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-tab-link {
+      background: transparent;
+      border: 1px solid transparent;
       color: var(--text-muted);
-      font-weight: 500;
-      border-left: 1px solid var(--border-main);
-      padding-left: 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+
+    .nav-tab-link:hover { color: var(--text-heading); background-color: var(--bg-subtle); }
+    .nav-tab-link.active {
+      color: var(--accent-oxford);
+      background-color: var(--bg-subtle);
+      border-color: var(--border-main);
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
     .lang-switcher {
@@ -169,10 +189,9 @@
       align-items: center;
       gap: 4px;
     }
-
     .badge-powered strong { color: var(--accent-oxford); }
 
-    /* Live Auto-Update Discovery Bar */
+    /* Live Discovery Bar */
     .discovery-live-ticker {
       background-color: var(--bg-subtle);
       border-bottom: 1px solid var(--border-main);
@@ -186,12 +205,6 @@
       gap: 8px;
     }
 
-    .ticker-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
     .live-dot {
       width: 7px;
       height: 7px;
@@ -201,7 +214,7 @@
       box-shadow: 0 0 6px var(--accent-green);
     }
 
-    /* A-Z Alphabetical Index Bar */
+    /* Alphabet Nav */
     .alphabet-nav-bar {
       background-color: var(--bg-surface);
       border-bottom: 1px solid var(--border-main);
@@ -211,15 +224,6 @@
       gap: 6px;
       overflow-x: auto;
       white-space: nowrap;
-    }
-
-    .alphabet-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin-right: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .alpha-btn {
@@ -238,152 +242,96 @@
       justify-content: center;
       transition: all 0.15s;
     }
+    .alpha-btn:hover { background-color: var(--accent-oxford); color: #fff; border-color: var(--accent-oxford); }
+    .alpha-btn.active { background-color: var(--accent-oxford); color: #fff; border-color: var(--accent-oxford); }
+    .alpha-btn.all-btn { width: auto; padding: 0 12px; font-family: 'Inter'; font-size: 12px; }
 
-    .alpha-btn:hover {
-      background-color: var(--accent-oxford);
-      color: #fff;
-      border-color: var(--accent-oxford);
+    /* Portal Main Views */
+    .portal-view-section {
+      display: none;
+    }
+    .portal-view-section.active {
+      display: block;
     }
 
-    .alpha-btn.active {
-      background-color: var(--accent-oxford);
-      color: #fff;
-      border-color: var(--accent-oxford);
-      box-shadow: 0 2px 8px rgba(126, 34, 23, 0.3);
-    }
-
-    .alpha-btn.all-btn {
-      width: auto;
-      padding: 0 12px;
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-    }
-
-    /* Main Container */
     .main-layout {
       max-width: 1260px;
       margin: 0 auto;
-      padding: 40px 24px 80px 24px;
+      padding: 36px 24px 80px 24px;
       display: grid;
       grid-template-columns: 1fr 340px;
       gap: 40px;
     }
 
-    /* Search Section */
-    .search-hero {
-      margin-bottom: 30px;
-    }
-
-    .search-bar-wrap {
-      position: relative;
+    .full-width-layout {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 36px 24px 80px 24px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      gap: 30px;
     }
 
-    .search-input {
-      width: 100%;
-      font-family: 'Crimson Pro', serif;
-      font-size: 24px;
-      padding: 16px 20px 16px 52px;
-      border: 2px solid var(--border-main);
-      border-radius: 10px;
-      background-color: var(--bg-surface);
-      color: var(--text-heading);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .search-input:focus {
-      border-color: var(--accent-oxford);
-      box-shadow: 0 4px 20px rgba(126, 34, 23, 0.08);
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 18px;
-      font-size: 20px;
-      color: var(--text-muted);
-    }
-
-    .quick-tags {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .tag-btn {
-      background-color: var(--bg-surface);
-      border: 1px solid var(--border-main);
-      color: var(--text-body);
-      padding: 4px 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Crimson Pro', serif;
-      font-size: 15px;
-      transition: all 0.15s;
-    }
-
-    .tag-btn:hover {
-      border-color: var(--accent-oxford);
-      color: var(--accent-oxford);
-      background-color: var(--bg-subtle);
-    }
-
-    /* Lexicon Entry Card */
-    .entry-card {
+    /* Cards */
+    .academic-panel {
       background-color: var(--bg-surface);
       border: 1px solid var(--border-main);
       border-radius: 12px;
-      padding: 36px;
-      margin-bottom: 32px;
+      padding: 32px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
 
-    .entry-header {
-      border-bottom: 1px solid var(--border-main);
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .headword-wrap {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .headword {
+    .panel-title {
       font-family: 'Crimson Pro', serif;
-      font-size: 38px;
+      font-size: 26px;
       font-weight: 700;
       color: var(--text-heading);
-      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .ipa-phonetic {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 15px;
+    .panel-desc {
+      font-size: 13.5px;
       color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Forms & Inputs */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-input, .form-select {
       background-color: var(--bg-subtle);
-      padding: 3px 8px;
-      border-radius: 4px;
+      border: 1px solid var(--border-main);
+      padding: 10px 14px;
+      border-radius: 6px;
+      color: var(--text-heading);
+      font-size: 13.5px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
     }
-
-    .pos-tag {
-      font-family: 'Crimson Pro', serif;
-      font-style: italic;
-      font-size: 17px;
-      color: var(--text-muted);
-    }
+    .form-input:focus, .form-select:focus { border-color: var(--accent-oxford); }
 
     .cite-btn {
       background-color: var(--bg-subtle);
@@ -391,181 +339,78 @@
       color: var(--text-body);
       font-size: 12px;
       font-weight: 600;
-      padding: 6px 12px;
+      padding: 8px 16px;
       border-radius: 6px;
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 4px;
-      transition: background 0.15s;
+      gap: 6px;
+      transition: all 0.15s;
     }
-
     .cite-btn:hover { background-color: var(--bg-accent); }
 
-    /* Proto Root Box */
-    .root-box {
+    .btn-oxford {
+      background-color: var(--accent-oxford);
+      color: #fff;
+      border: none;
+    }
+    .btn-oxford:hover { background-color: #63190f; color: #fff; }
+
+    /* Citation Results Box */
+    .citation-output-card {
       background-color: var(--bg-subtle);
-      border-left: 4px solid var(--accent-oxford);
-      padding: 16px 20px;
-      border-radius: 0 8px 8px 0;
-      margin-bottom: 24px;
+      border: 1px solid var(--border-main);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
     }
 
-    .root-label {
-      font-size: 11.5px;
-      text-transform: uppercase;
+    .citation-format-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.5px;
       color: var(--accent-oxford);
+      text-transform: uppercase;
       margin-bottom: 4px;
     }
 
-    .root-content {
+    .citation-text {
       font-family: 'Crimson Pro', serif;
-      font-size: 19px;
+      font-size: 17px;
       color: var(--text-heading);
       line-height: 1.5;
     }
 
-    /* Comparative Philology Box */
-    .comparative-box {
-      background-color: var(--bg-subtle);
+    /* Live Research Search Results */
+    .research-results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .research-card {
+      background-color: var(--bg-surface);
       border: 1px solid var(--border-main);
       border-radius: 8px;
       padding: 20px;
-      margin-bottom: 24px;
-    }
-
-    .comparative-title {
-      font-family: 'Crimson Pro', serif;
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--text-heading);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .source-item {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border-main);
-      font-size: 13.5px;
-      line-height: 1.6;
-    }
-    .source-item:last-child { border-bottom: none; }
-    .source-tag { font-weight: 700; color: var(--accent-oxford); margin-right: 4px; font-family: 'Inter'; font-size: 12px; }
-
-    /* Timeline */
-    .section-title {
-      font-family: 'Crimson Pro', serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text-heading);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .timeline-list {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
-      position: relative;
-      padding-left: 20px;
-      border-left: 2px solid var(--border-main);
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .timeline-item { position: relative; }
-    .timeline-dot { position: absolute; left: -26px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--accent-oxford); border: 2px solid var(--bg-surface); }
-    .timeline-century { font-size: 12px; font-weight: 700; color: var(--accent-oxford); font-family: 'JetBrains Mono', monospace; }
-    .timeline-text { font-size: 14.5px; color: var(--text-body); margin-top: 2px; }
-    .source-quote { font-family: 'Crimson Pro', serif; font-style: italic; color: var(--text-turkic); font-size: 16px; }
-
-    /* Cognates Grid */
-    .cognates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .cognate-cell {
-      background-color: var(--bg-subtle);
-      border: 1px solid var(--border-main);
-      border-radius: 6px;
-      padding: 10px 14px;
-      font-size: 13px;
-    }
-
-    .cognate-lang { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
-    .cognate-word { font-family: 'Crimson Pro', serif; font-size: 17px; font-weight: 600; color: var(--text-heading); }
-
-    /* Sidebar Widgets */
-    .sidebar-widget {
-      background-color: var(--bg-surface);
-      border: 1px solid var(--border-main);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-
-    .widget-title {
+    .research-card-title {
       font-family: 'Crimson Pro', serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--text-heading);
-      border-bottom: 1px solid var(--border-main);
-      padding-bottom: 10px;
-      margin-bottom: 14px;
     }
 
-    .stats-list { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
-    .stats-row { display: flex; justify-content: space-between; color: var(--text-muted); }
-    .stats-row strong { color: var(--text-heading); font-family: 'JetBrains Mono', monospace; }
-
-    /* Live Crawler Activity Log Box */
-    .crawler-activity-box {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-main);
-      border-radius: 6px;
-      padding: 10px;
-      max-height: 160px;
-      overflow-y: auto;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .crawler-log-line {
-      color: var(--text-turkic);
-      border-bottom: 1px dashed var(--border-main);
-      padding-bottom: 4px;
-    }
-
-    /* Citation Modal */
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    .modal-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-main);
-      border-radius: 12px;
-      width: 90%;
-      max-width: 600px;
-      padding: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    .research-card-desc {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -585,11 +430,60 @@
     footer a { color: var(--text-heading); text-decoration: none; font-weight: 600; }
     footer a:hover { color: var(--accent-oxford); }
 
+    /* Lexicon Entry Card */
+    .entry-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-main);
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .entry-header {
+      border-bottom: 1px solid var(--border-main);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .headword-wrap { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+    .headword { font-family: 'Crimson Pro', serif; font-size: 38px; font-weight: 700; color: var(--text-heading); letter-spacing: -0.5px; }
+    .ipa-phonetic { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--text-muted); background-color: var(--bg-subtle); padding: 3px 8px; border-radius: 4px; }
+    .pos-tag { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 17px; color: var(--text-muted); }
+    .root-box { background-color: var(--bg-subtle); border-left: 4px solid var(--accent-oxford); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px; }
+    .root-label { font-size: 11.5px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; color: var(--accent-oxford); margin-bottom: 4px; }
+    .root-content { font-family: 'Crimson Pro', serif; font-size: 19px; color: var(--text-heading); line-height: 1.5; }
+    .comparative-box { background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+    .comparative-title { font-family: 'Crimson Pro', serif; font-size: 17px; font-weight: 700; color: var(--text-heading); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .source-item { padding: 10px 0; border-bottom: 1px solid var(--border-main); font-size: 13.5px; line-height: 1.6; }
+    .source-item:last-child { border-bottom: none; }
+    .source-tag { font-weight: 700; color: var(--accent-oxford); margin-right: 4px; font-family: 'Inter'; font-size: 12px; }
+    .section-title { font-family: 'Crimson Pro', serif; font-size: 20px; font-weight: 700; color: var(--text-heading); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .timeline-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; position: relative; padding-left: 20px; border-left: 2px solid var(--border-main); }
+    .timeline-item { position: relative; }
+    .timeline-dot { position: absolute; left: -26px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--accent-oxford); border: 2px solid var(--bg-surface); }
+    .timeline-century { font-size: 12px; font-weight: 700; color: var(--accent-oxford); font-family: 'JetBrains Mono', monospace; }
+    .timeline-text { font-size: 14.5px; color: var(--text-body); margin-top: 2px; }
+    .source-quote { font-family: 'Crimson Pro', serif; font-style: italic; color: var(--text-turkic); font-size: 16px; }
+    .cognates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 24px; }
+    .cognate-cell { background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 6px; padding: 10px 14px; font-size: 13px; }
+    .cognate-lang { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+    .cognate-word { font-family: 'Crimson Pro', serif; font-size: 17px; font-weight: 600; color: var(--text-heading); }
+    .sidebar-widget { background-color: var(--bg-surface); border: 1px solid var(--border-main); border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+    .widget-title { font-family: 'Crimson Pro', serif; font-size: 18px; font-weight: 700; color: var(--text-heading); border-bottom: 1px solid var(--border-main); padding-bottom: 10px; margin-bottom: 14px; }
+    .stats-list { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+    .stats-row { display: flex; justify-content: space-between; color: var(--text-muted); }
+    .stats-row strong { color: var(--text-heading); font-family: 'JetBrains Mono', monospace; }
+    .crawler-activity-box { background: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 6px; padding: 10px; max-height: 160px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; display: flex; flex-direction: column; gap: 6px; }
+    .crawler-log-line { color: var(--text-turkic); border-bottom: 1px dashed var(--border-main); padding-bottom: 4px; }
+
     @media (max-width: 900px) {
       .main-layout { grid-template-columns: 1fr; }
-      header { padding: 0 16px; }
-      .entry-card { padding: 20px; }
-      .alphabet-nav-bar { padding: 10px 16px; }
+      header { height: auto; padding: 14px; flex-direction: column; gap: 12px; }
+      .alphabet-nav-bar { padding: 10px 14px; }
     }
   </style>
 </head>
@@ -601,8 +495,15 @@
       <span class="brand-subtitle" id="txt-sub-brand">Karşılaştırmalı Etimolojik Külliyat</span>
     </div>
 
+    <!-- Main Navigation Portals -->
+    <nav class="header-nav">
+      <button class="nav-tab-link active" data-view="view-etymology">📚 Etimoloji Külliyatı</button>
+      <button class="nav-tab-link" data-view="view-citation-studio">✍️ Kaynakça & Bibliyografya</button>
+      <button class="nav-tab-link" data-view="view-wiki-research">🌐 Canlı Vikipedi Araştırması</button>
+      <button class="nav-tab-link" data-view="view-archive-pdf">🏛️ Internet Archive PDF & Yazma</button>
+    </nav>
+
     <div class="header-actions">
-      <!-- 5-Language Switcher -->
       <select class="lang-switcher" id="lang-select">
         <option value="tr">🇹🇷 Türkçe</option>
         <option value="az">🇦🇿 Azərbaycanca</option>
@@ -627,191 +528,299 @@
       <span id="txt-crawler-status">Canlı Akademik Derlem: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Senkronize</span>
     </div>
     <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px;" id="txt-latest-update">
-      Son Canlı Taramalar: Aktif
+      Akademik Araştırma Portalı Aktif
     </div>
   </div>
 
-  <!-- A-Z Alphabetical Index Filter Bar -->
-  <nav class="alphabet-nav-bar" id="alphabet-nav">
-    <span class="alphabet-label" id="txt-alpha-label">A-Z Dizin:</span>
-    <button class="alpha-btn all-btn active" data-letter="ALL">Tümü (All)</button>
-    <button class="alpha-btn" data-letter="A">A</button>
-    <button class="alpha-btn" data-letter="B">B</button>
-    <button class="alpha-btn" data-letter="C">C</button>
-    <button class="alpha-btn" data-letter="Ç">Ç</button>
-    <button class="alpha-btn" data-letter="D">D</button>
-    <button class="alpha-btn" data-letter="E">E</button>
-    <button class="alpha-btn" data-letter="F">F</button>
-    <button class="alpha-btn" data-letter="G">G</button>
-    <button class="alpha-btn" data-letter="H">H</button>
-    <button class="alpha-btn" data-letter="I">I</button>
-    <button class="alpha-btn" data-letter="İ">İ</button>
-    <button class="alpha-btn" data-letter="K">K</button>
-    <button class="alpha-btn" data-letter="L">L</button>
-    <button class="alpha-btn" data-letter="M">M</button>
-    <button class="alpha-btn" data-letter="N">N</button>
-    <button class="alpha-btn" data-letter="O">O</button>
-    <button class="alpha-btn" data-letter="Ö">Ö</button>
-    <button class="alpha-btn" data-letter="P">P</button>
-    <button class="alpha-btn" data-letter="R">R</button>
-    <button class="alpha-btn" data-letter="S">S</button>
-    <button class="alpha-btn" data-letter="Ş">Ş</button>
-    <button class="alpha-btn" data-letter="T">T</button>
-    <button class="alpha-btn" data-letter="U">U</button>
-    <button class="alpha-btn" data-letter="Ü">Ü</button>
-    <button class="alpha-btn" data-letter="V">V</button>
-    <button class="alpha-btn" data-letter="Y">Y</button>
-    <button class="alpha-btn" data-letter="Z">Z</button>
-  </nav>
+  <!-- PORTAL 1: ETYMOLOGY LEXICON -->
+  <div class="portal-view-section active" id="view-etymology">
+    <!-- A-Z Alphabetical Index Filter Bar -->
+    <nav class="alphabet-nav-bar" id="alphabet-nav">
+      <span class="alphabet-label" id="txt-alpha-label">A-Z Dizin:</span>
+      <button class="alpha-btn all-btn active" data-letter="ALL">Tümü</button>
+      <button class="alpha-btn" data-letter="A">A</button>
+      <button class="alpha-btn" data-letter="B">B</button>
+      <button class="alpha-btn" data-letter="C">C</button>
+      <button class="alpha-btn" data-letter="Ç">Ç</button>
+      <button class="alpha-btn" data-letter="D">D</button>
+      <button class="alpha-btn" data-letter="E">E</button>
+      <button class="alpha-btn" data-letter="F">F</button>
+      <button class="alpha-btn" data-letter="G">G</button>
+      <button class="alpha-btn" data-letter="H">H</button>
+      <button class="alpha-btn" data-letter="I">I</button>
+      <button class="alpha-btn" data-letter="İ">İ</button>
+      <button class="alpha-btn" data-letter="K">K</button>
+      <button class="alpha-btn" data-letter="L">L</button>
+      <button class="alpha-btn" data-letter="M">M</button>
+      <button class="alpha-btn" data-letter="N">N</button>
+      <button class="alpha-btn" data-letter="O">O</button>
+      <button class="alpha-btn" data-letter="Ö">Ö</button>
+      <button class="alpha-btn" data-letter="P">P</button>
+      <button class="alpha-btn" data-letter="R">R</button>
+      <button class="alpha-btn" data-letter="S">S</button>
+      <button class="alpha-btn" data-letter="Ş">Ş</button>
+      <button class="alpha-btn" data-letter="T">T</button>
+      <button class="alpha-btn" data-letter="U">U</button>
+      <button class="alpha-btn" data-letter="Ü">Ü</button>
+      <button class="alpha-btn" data-letter="V">V</button>
+      <button class="alpha-btn" data-letter="Y">Y</button>
+      <button class="alpha-btn" data-letter="Z">Z</button>
+    </nav>
 
-  <main class="main-layout">
-    <!-- Left Column: Search & Etymology Lexicon Cards -->
-    <div class="lexicon-content">
-      <!-- Search Hero -->
-      <div class="search-hero">
-        <div class="search-bar-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" class="search-input" id="etymo-search-input" placeholder="Madde başı, Proto kök veya kavram arayın... (örn: bitig, tengri, kut, yurt, bil-, erdem, sev-, gönül)">
+    <div class="main-layout">
+      <!-- Left Column: Search & Etymology Cards -->
+      <div class="lexicon-content">
+        <div class="search-hero" style="margin-bottom: 24px;">
+          <div style="position: relative; display: flex; align-items: center;">
+            <span style="position: absolute; left: 18px; font-size: 20px; color: var(--text-muted);">🔍</span>
+            <input type="text" class="search-input" id="etymo-search-input" placeholder="Madde başı, Proto kök veya kavram arayın... (örn: bitig, tengri, kut, yurt, bil-, erdem, sev-, gönül)">
+          </div>
+
+          <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--text-muted);">
+            <span id="txt-quick-label">Hızlı İnceleme:</span>
+            <button class="tag-btn" data-word="alp">alp</button>
+            <button class="tag-btn" data-word="bitig">bitig (betik)</button>
+            <button class="tag-btn" data-word="bil-">bil- (bilgi)</button>
+            <button class="tag-btn" data-word="çağ">çağ</button>
+            <button class="tag-btn" data-word="demir">demir</button>
+            <button class="tag-btn" data-word="elma">elma</button>
+            <button class="tag-btn" data-word="gönül">gönül</button>
+            <button class="tag-btn" data-word="kut">kut</button>
+            <button class="tag-btn" data-word="öğren-">öğren- (ög)</button>
+            <button class="tag-btn" data-word="sev-">sev- (sevgi)</button>
+            <button class="tag-btn" data-word="tengri">tengri (tanrı)</button>
+            <button class="tag-btn" data-word="ulus">ulus</button>
+            <button class="tag-btn" data-word="yurt">yurt</button>
+          </div>
         </div>
 
-        <div class="quick-tags">
-          <span id="txt-quick-label">Hızlı İnceleme:</span>
-          <button class="tag-btn" data-word="alp">alp</button>
-          <button class="tag-btn" data-word="bitig">bitig (betik)</button>
-          <button class="tag-btn" data-word="bil-">bil- (bilgi)</button>
-          <button class="tag-btn" data-word="çağ">çağ</button>
-          <button class="tag-btn" data-word="demir">demir</button>
-          <button class="tag-btn" data-word="elma">elma</button>
-          <button class="tag-btn" data-word="gönül">gönül</button>
-          <button class="tag-btn" data-word="kut">kut</button>
-          <button class="tag-btn" data-word="öğren-">öğren- (ög)</button>
-          <button class="tag-btn" data-word="sev-">sev- (sevgi)</button>
-          <button class="tag-btn" data-word="tengri">tengri (tanrı)</button>
-          <button class="tag-btn" data-word="ulus">ulus</button>
-          <button class="tag-btn" data-word="yurt">yurt</button>
+        <div id="filter-status-banner" style="margin-bottom: 16px; font-size: 13px; color: var(--text-muted); display: none;">
+          <span id="txt-filter-desc"></span>
+          <button id="btn-clear-filter" style="background: none; border: none; color: var(--accent-oxford); font-weight: 600; cursor: pointer; margin-left: 6px;">[Filtreyi Sıfırla]</button>
+        </div>
+
+        <div id="entries-container"></div>
+      </div>
+
+      <!-- Right Column: Scholarly Information -->
+      <aside class="academic-sidebar">
+        <div class="sidebar-widget">
+          <h3 class="widget-title">📡 Canlı Derlem & Tarama Akışı</h3>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
+            Hasan Eren (TDES), Nişanyan, Clauson ve DLT derlemlerinden eş zamanlı veri akışı:
+          </p>
+          <div class="crawler-activity-box" id="crawler-log-container">
+            <div class="crawler-log-line">⚡ [16:58:12] Hasan Eren (TDES): 'alp' kökü doğrulandı.</div>
+            <div class="crawler-log-line">⚡ [16:58:34] Nişanyan Sözlük: 'bitig' tanıklığı eşitlendi.</div>
+            <div class="crawler-log-line">⚡ [16:59:01] Clauson EDPT: 'temür' Orhun kaydı bağlandı.</div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="widget-title">📚 Kaynakça Külliyatı</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12.5px; line-height: 1.5;">
+            <div>🏛️ <strong>Prof. Dr. Hasan Eren:</strong> <em>Türk Dilinin Etimolojik Sözlüğü (TDES)</em>, Ankara.</div>
+            <div>📜 <strong>Sevan Nişanyan:</strong> <em>Nişanyan Sözlük: Çağdaş Türkçenin Etimolojisi</em>.</div>
+            <div>🗡️ <strong>Sir Gerard Clauson:</strong> <em>An Etymological Dictionary of Pre-Thirteenth-Century Turkish</em>, Oxford.</div>
+            <div>📖 <strong>Kâşgarlı Mahmud:</strong> <em>Dīwānu L̠ugāt it-Turk</em> (MS 1074).</div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="widget-title" id="txt-stats-title">Derlem & Külliyat İstatistikleri</h3>
+          <div class="stats-list">
+            <div class="stats-row"><span>İncelenen Kök Sayısı:</span><strong>18.450 Kök</strong></div>
+            <div class="stats-row"><span>Tarihsel Kaynakça:</span><strong>54 Eser & Metin</strong></div>
+            <div class="stats-row"><span>En Eski Tanıklık:</span><strong>MS 732 (Kül Tigin)</strong></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="widget-title" id="txt-editor-title">Külliyat Heyeti & Baş Editör</h3>
+          <p style="font-size: 13.5px; color: var(--text-body); line-height: 1.6;">
+            <strong>Tunahan Haksever</strong><br>
+            <span style="font-size: 12px; color: var(--text-muted);">Şair, Yazar, Dil Tasarımcısı & Türk Dili ve Edebiyatı Araştırmacısı (KTÜ)</span>
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- PORTAL 2: ACADEMIC CITATION & BIBLIOGRAPHY STUDIO -->
+  <div class="portal-view-section" id="view-citation-studio">
+    <div class="full-width-layout">
+      <div class="academic-panel">
+        <h2 class="panel-title">✍️ Akademik Kaynakça ve Bibliyografya Stüdyosu</h2>
+        <p class="panel-desc">
+          Tez, makale ve bilimsel bildirileriniz için <strong>APA 7th</strong>, <strong>MLA 9th</strong>, <strong>Chicago 17th</strong>, <strong>İSAM (İslam Araştırmaları Merkezi)</strong>, <strong>TÜBİTAK/ULAKBİM</strong> ve <strong>BibTeX</strong> formatlarında kusursuz kaynakça oluşturun.
+        </p>
+
+        <!-- Citation Generator Form -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Eser Türü:</label>
+            <select class="form-select" id="cite-doc-type">
+              <option value="book">Kitap (Tek veya Çok Yazarlı)</option>
+              <option value="article">Akademik Dergi Makalesi</option>
+              <option value="thesis">Yüksek Lisans / Doktora Tezi</option>
+              <option value="lexicon">Sözlük / Ansiklopedi Maddesi</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Yazar Adı Soyadı:</label>
+            <input type="text" class="form-input" id="cite-author" value="Hasan Eren" placeholder="Örn: Hasan Eren veya Tunahan Haksever">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Eser / Kitap / Makale Adı:</label>
+            <input type="text" class="form-input" id="cite-title" value="Türk Dilinin Etimolojik Sözlüğü" placeholder="Eserin tam başlığı">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Yayın Yılı:</label>
+            <input type="text" class="form-input" id="cite-year" value="1999" placeholder="Örn: 1999 veya 2026">
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Yayınevi / Kurum / Üniversite:</label>
+            <input type="text" class="form-input" id="cite-publisher" value="Türk Dil Kurumu Yayınları" placeholder="Örn: TDK Yayınları, Dergâh, Oxford University Press">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Basım Yeri (Şehir):</label>
+            <input type="text" class="form-input" id="cite-city" value="Ankara" placeholder="Örn: Ankara, İstanbul, Oxford">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Sayfa / Cilt No (Opsiyonel):</label>
+            <input type="text" class="form-input" id="cite-pages" value="s. 46-52" placeholder="Örn: s. 120-135">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">URL / DOI (Varsa):</label>
+            <input type="text" class="form-input" id="cite-doi" value="https://bitigey.com" placeholder="Örn: https://doi.org/10.1234/...">
+          </div>
+        </div>
+
+        <button class="cite-btn btn-oxford" id="btn-generate-citations" style="padding: 12px 24px; font-size: 14px;">
+          ⚡ Tüm Akademik Formatlarda Kaynakça Üret
+        </button>
+
+        <!-- Citation Outputs Grid -->
+        <div id="citation-results-container" style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <!-- Dynamically populated -->
         </div>
       </div>
 
-      <!-- Active Filter Banner -->
-      <div id="filter-status-banner" style="margin-bottom: 16px; font-size: 13px; color: var(--text-muted); display: none;">
-        <span id="txt-filter-desc"></span>
-        <button id="btn-clear-filter" style="background: none; border: none; color: var(--accent-oxford); font-weight: 600; cursor: pointer; margin-left: 6px;">[Filtreyi Sıfırla]</button>
-      </div>
-
-      <!-- Main Etymological Entry Container -->
-      <div id="entries-container">
-        <!-- Rendered dynamically -->
+      <!-- Scholarly Guidelines Accordion -->
+      <div class="academic-panel">
+        <h3 class="panel-title" style="font-size: 20px;">📜 Akademik Kaynak Gösterme Kuralları Özeti</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 13.5px; color: var(--text-body); line-height: 1.7; margin-top: 14px;">
+          <div>
+            <strong style="color: var(--accent-oxford);">1. APA 7. Sürüm Kuralı:</strong>
+            <p>Soyadı, Adının Baş Harfi. (Yıl). <em>Kitap adı italik</em>. Yayınevi. Metin içi atıfta parantez kullanılır: <code>(Eren, 1999, s. 46)</code>.</p>
+          </div>
+          <div>
+            <strong style="color: var(--accent-oxford);">2. İSAM / Dipnot Kuralı (Türk İlahiyat & Edebiyat):</strong>
+            <p>Yazar Adı Soyadı, <em>Kitap Adı İtalik</em>, Basım Yeri: Yayınevi, Yıl, s. XX. Sayfa numarası doğrudan belirtilir.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Right Column: Scholarly Information & Corpus Stats -->
-    <aside class="academic-sidebar">
-      <!-- Live External Crawler Log Stream -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title">📡 Canlı Derlem & Tarama Akışı</h3>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
-          Hasan Eren (TDES), Nişanyan, Clauson ve DLT derlemlerinden eş zamanlı veri akışı:
+  <!-- PORTAL 3: WIKIPEDIA & WIKTIONARY LIVE RESEARCH -->
+  <div class="portal-view-section" id="view-wiki-research">
+    <div class="full-width-layout">
+      <div class="academic-panel">
+        <h2 class="panel-title">🌐 Canlı Vikipedi & Vikisözlük Akademik Araştırma Asistanı</h2>
+        <p class="panel-desc">
+          Literatür taramalarınız için doğrudan Vikipedi ve Vikisözlük veritabanından bilimsel özet, madde başı, tarihsel arka plan ve akademik kavram dökümü çekin.
         </p>
-        <div class="crawler-activity-box" id="crawler-log-container">
-          <div class="crawler-log-line">⚡ [16:58:12] Hasan Eren (TDES): 'alp' kökü doğrulandı.</div>
-          <div class="crawler-log-line">⚡ [16:58:34] Nişanyan Sözlük: 'bitig' tanıklığı eşitlendi.</div>
-          <div class="crawler-log-line">⚡ [16:59:01] Clauson EDPT: 'temür' Orhun kaydı bağlandı.</div>
-          <div class="crawler-log-line">⚡ [16:59:20] DLT: 'köŋül' Karahanlı şahidi işlendi.</div>
-        </div>
-      </div>
 
-      <!-- Canon Source Compendium -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title">📚 Kaynakça Külliyatı</h3>
-        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12.5px; line-height: 1.5;">
-          <div>🏛️ <strong>Prof. Dr. Hasan Eren:</strong> <em>Türk Dilinin Etimolojik Sözlüğü (TDES)</em>, Ankara.</div>
-          <div>📜 <strong>Sevan Nişanyan:</strong> <em>Nişanyan Sözlük: Çağdaş Türkçenin Etimolojisi</em>.</div>
-          <div>🗡️ <strong>Sir Gerard Clauson:</strong> <em>An Etymological Dictionary of Pre-Thirteenth-Century Turkish</em>, Oxford.</div>
-          <div>📖 <strong>Kâşgarlı Mahmud:</strong> <em>Dīwānu L̠ugāt it-Turk</em> (MS 1074).</div>
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <input type="text" class="search-input" id="wiki-search-input" value="Orhun Yazıtları" placeholder="Araştırmak istediğiniz konu, şair, dil veya kavram... (örn: Kutadgu Bilig, DLT, Kül Tigin)">
+          <button class="cite-btn btn-oxford" id="btn-fetch-wiki" style="padding: 0 24px; font-size: 15px;">🔍 Canlı Araştır</button>
         </div>
-      </div>
 
-      <!-- Corpus Statistics -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title" id="txt-stats-title">Derlem & Külliyat İstatistikleri</h3>
-        <div class="stats-list">
-          <div class="stats-row">
-            <span>İncelenen Kök Sayısı:</span>
-            <strong id="stat-root-count">18.450 Kök</strong>
-          </div>
-          <div class="stats-row">
-            <span>Tarihsel Kaynakça:</span>
-            <strong>54 Eser & Metin</strong>
-          </div>
-          <div class="stats-row">
-            <span>En Eski Tanıklık:</span>
-            <strong>MS 732 (Kül Tigin)</strong>
-          </div>
-          <div class="stats-row">
-            <span>Akraba Dil Karşılaştırması:</span>
-            <strong>32 Lehçe & Dil</strong>
+        <div id="wiki-results-box" style="background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 24px;">
+          <h3 style="font-family: 'Crimson Pro', serif; font-size: 24px; color: var(--text-heading);" id="wiki-title">Orhun Yazıtları</h3>
+          <p style="font-size: 14.5px; line-height: 1.8; color: var(--text-body); margin-top: 10px;" id="wiki-extract">
+            Orhun Yazıtları, Göktürklerin bilinen ilk yazılı belgeleridir. Bilge Kağan ve Kül Tigin yazıtları ile Tonyukuk yazıtından oluşur. Türk dilinin tarihsel gelişimi ve etimolojisi açısından en temel birincil kaynaktır.
+          </p>
+          <div style="margin-top: 16px;">
+            <a href="https://tr.wikipedia.org/wiki/Orhun_Yazıtları" target="_blank" class="cite-btn" id="wiki-link">
+              📖 Vikipedi Maddesine Git →
+            </a>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Chief Editor & Research Institution -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title" id="txt-editor-title">Külliyat Heyeti & Baş Editör</h3>
-        <p style="font-size: 13.5px; color: var(--text-body); line-height: 1.6;">
-          <strong>Tunahan Haksever</strong><br>
-          <span style="font-size: 12px; color: var(--text-muted);">Şair, Yazar, Dil Tasarımcısı & Türk Dili ve Edebiyatı Araştırmacısı (KTÜ)</span>
+  <!-- PORTAL 4: INTERNET ARCHIVE PDF & MANUSCRIPTS -->
+  <div class="portal-view-section" id="view-archive-pdf">
+    <div class="full-width-layout">
+      <div class="academic-panel">
+        <h2 class="panel-title">🏛️ Internet Archive Tarihsel El Yazması & PDF Arama Motoru</h2>
+        <p class="panel-desc">
+          Dünya kütüphanelerinde (archive.org) taranmış yüz binlerce nadir Türkçe, Osmanlıca, Çağatayca el yazması, etimoloji ve filoloji kitabını canlı olarak arayın ve PDF olarak okuyun.
         </p>
-        <div style="margin-top: 12px; font-size: 12px; color: var(--text-muted);">
-          Edebi Eserleri: <em>Mâsivâ Yolculuğu</em>, <em>Ekinoksu Beklemek</em>.<br>
-          Yayın: <em>Kög Dergisi</em> (Genel Yayın Yönetmeni).
+
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <input type="text" class="search-input" id="archive-search-input" value="Divanü Lugatit Türk" placeholder="Yazma eser, müellif veya kitap adı... (örn: Dede Korkut, Kutadgu Bilig, Clauson, Radloff)">
+          <button class="cite-btn btn-oxford" id="btn-fetch-archive" style="padding: 0 24px; font-size: 15px;">🏛️ Arşivde Ara</button>
+        </div>
+
+        <div class="research-results-grid" id="archive-results-grid">
+          <!-- Sample Archive Results -->
+          <div class="research-card">
+            <div>
+              <span style="font-size: 11.5px; font-family: 'JetBrains Mono'; color: var(--accent-oxford); font-weight: 700;">PDF / EL YAZMASI</span>
+              <h4 class="research-card-title">Dīwānu L̠ugāt it-Turk (Kâşgarlı Mahmud)</h4>
+              <p class="research-card-desc">1074 yılında kaleme alınmış ilk Türkçe ansiklopedik sözlük ve dilbilgisi külliyatı.</p>
+            </div>
+            <a href="https://archive.org/details/divanulugatitturk01kasg" target="_blank" class="cite-btn" style="width: fit-content;">
+              📥 Arşivden PDF İncele / Oku →
+            </a>
+          </div>
+
+          <div class="research-card">
+            <div>
+              <span style="font-size: 11.5px; font-family: 'JetBrains Mono'; color: var(--accent-oxford); font-weight: 700;">PDF / SÖZLÜK</span>
+              <h4 class="research-card-title">Radloff — Versuch eines Wörterbuches der Türk-Dialecte</h4>
+              <p class="research-card-desc">Wilhelm Radloff'un 4 ciltlik anıtsal Karşılaştırmalı Türk Lehçeleri Sözlüğü (1893-1911).</p>
+            </div>
+            <a href="https://archive.org/details/versucheineswrte01radluoft" target="_blank" class="cite-btn" style="width: fit-content;">
+              📥 Arşivden PDF İncele / Oku →
+            </a>
+          </div>
+
+          <div class="research-card">
+            <div>
+              <span style="font-size: 11.5px; font-family: 'JetBrains Mono'; color: var(--accent-oxford); font-weight: 700;">PDF / METİN</span>
+              <h4 class="research-card-title">Kutadgu Bilig (Viyana & Fergana Nüshaları)</h4>
+              <p class="research-card-desc">Yusuf Has Hacib'in 1069 tarihli Karahanlı Türkçesi siyasetname ve ahlak başyapıtı.</p>
+            </div>
+            <a href="https://archive.org/details/kutadgubilig00yusuuoft" target="_blank" class="cite-btn" style="width: fit-content;">
+              📥 Arşivden PDF İncele / Oku →
+            </a>
+          </div>
         </div>
       </div>
-
-      <!-- Live Dynamic Discovery Box -->
-      <div class="sidebar-widget" style="background-color: var(--bg-subtle);">
-        <h3 class="widget-title" style="border-bottom: none; margin-bottom: 8px;" id="txt-crawler-box-title">🔄 Canlı Çevrimiçi Etimoloji Motoru</h3>
-        <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;" id="txt-crawler-box-desc">
-          Aradığınız kelime külliyatta yoksa, arka plan motoru uluslararası etimoloji derlemlerini anında tarar.
-        </p>
-        <button class="cite-btn" id="btn-force-crawl" style="width: 100%; justify-content: center; background-color: var(--bg-surface);">
-          ⚡ Canlı Karşılaştırmalı Tarama Yap
-        </button>
-      </div>
-    </aside>
-  </main>
-
-  <!-- Citation Modal -->
-  <div class="modal-overlay" id="citation-modal">
-    <div class="modal-box">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-main); padding-bottom: 12px; margin-bottom: 16px;">
-        <h3 style="font-family: 'Crimson Pro', serif; font-size: 20px; font-weight: 700;" id="txt-modal-title">Akademik Alıntı Formatı (Citation)</h3>
-        <button id="btn-close-modal" style="background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text-muted);">✕</button>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13px;">
-        <div>
-          <strong style="color: var(--accent-oxford);">APA 7th:</strong>
-          <pre style="background: var(--bg-subtle); padding: 10px; border-radius: 6px; font-family: 'Inter'; white-space: pre-wrap; margin-top: 4px;" id="cite-apa"></pre>
-        </div>
-        <div>
-          <strong style="color: var(--accent-oxford);">BibTeX:</strong>
-          <pre style="background: var(--bg-subtle); padding: 10px; border-radius: 6px; font-family: 'JetBrains Mono'; font-size: 11.5px; white-space: pre-wrap; margin-top: 4px;" id="cite-bibtex"></pre>
-        </div>
-      </div>
-
-      <button class="cite-btn" id="btn-copy-citation" style="margin-top: 18px; width: 100%; justify-content: center; background-color: var(--accent-oxford); color: #fff; border: none; padding: 10px;">
-        Panoya Kopyala (Copy to Clipboard)
-      </button>
     </div>
   </div>
 
   <!-- Academic Footer -->
   <footer>
     <div>
-      <strong>Bitigey Sözlük</strong> — Karşılaştırmalı Etimoloji ve Kökenbilim Külliyatı • Baş Mimari: <a href="https://github.com/tunahanhaksever" target="_blank">Tunahan Haksever</a>
+      <strong>Bitigey Sözlük & Akademik Araştırma Portalı</strong> — Baş Mimari: <a href="https://github.com/tunahanhaksever" target="_blank">Tunahan Haksever</a>
     </div>
     <div>
-      Akademik Platform: <a href="https://bitigey.com" target="_blank"><strong>bitigey.com</strong></a> • Açık Kaynak
+      Platform: <a href="https://bitigey.com" target="_blank"><strong>bitigey.com</strong></a> • Açık Kaynak
     </div>
   </footer>
 
@@ -819,110 +828,174 @@
   <script src="./corpus.js"></script>
 
   <script>
-    const i18n = {
-      tr: {
-        subBrand: "Karşılaştırmalı Etimolojik Külliyat",
-        searchPlaceholder: "Madde başı, Proto kök veya kavram arayın... (örn: bitig, tengri, kut, yurt, bil-, erdem, sev-, gönül)",
-        quickLabel: "Hızlı İnceleme:",
-        alphaLabel: "A-Z Dizin:",
-        protoRoot: "PROTO KÖK & SEMANTİK KÖKEN:",
-        comparativeTitle: "🏛️ Kaynaklar Arası Karşılaştırmalı Etimoloji Notları:",
-        firstRecords: "📜 Tarihsel İlk Metin Tanıklıkları:",
-        cognatesTitle: "🌍 Akraba Dillerdeki Karşılıklar & Çeviriler:",
-        derivativesTitle: "🧬 Türev Ailesi ve Morfolojik Açılım:",
-        statsTitle: "Derlem & Külliyat İstatistikleri",
-        editorTitle: "Külliyat Heyeti & Baş Editör",
-        crawlerBoxTitle: "🔄 Canlı Çevrimiçi Etimoloji Motoru",
-        crawlerBoxDesc: "Aradığınız kelime külliyatta yoksa, arka plan motoru uluslararası etimoloji derlemlerini anında tarar.",
-        btnCrawl: "⚡ Canlı Karşılaştırmalı Tarama Yap",
-        citeBtn: "📖 Akademik Alıntı Yap (Cite)",
-        crawlerStatus: "Canlı Akademik Derlem: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Senkronize"
-      },
-      az: {
-        subBrand: "Müqayisəli Etimoloji Külliyyat",
-        searchPlaceholder: "Maddə başı, Proto kök və ya söz axtarın... (məs: bitig, tengri, kut, yurt)",
-        quickLabel: "Sürətli Baxış:",
-        alphaLabel: "A-Z İndeks:",
-        protoRoot: "PROTO KÖK VƏ SEMANTİK MƏNŞƏ:",
-        comparativeTitle: "🏛️ Mənbələr Arası Müqayisəli Etimologiya:",
-        firstRecords: "📜 Tarixi İlk Mətn Şahidlikləri:",
-        cognatesTitle: "🌍 Qohum Dillərdəki Qarşılıqlar:",
-        derivativesTitle: "🧬 Törəmə Ailəsi və Morfoloji Quruluş:",
-        statsTitle: "Mənbə və Külliyyat Statistikası",
-        editorTitle: "Külliyyat Heyəti və Baş Redaktor",
-        crawlerBoxTitle: "🔄 Canlı Etimoloji Axtarış Mühərriki",
-        crawlerBoxDesc: "Axtardığınız kəlmə yoxdursa, arxa plan mühərriki beynəlxalq etimoloji mənbələri darayır.",
-        btnCrawl: "⚡ Canlı Axtarış Başlat",
-        citeBtn: "📖 Akademik İstinad Et (Cite)",
-        crawlerStatus: "Canlı Akademik Mənbə: Həsən Eren, Nişanyan və Clauson Sinxronlaşdırılıb"
-      },
-      en: {
-        subBrand: "Comparative Etymological Lexicon",
-        searchPlaceholder: "Search headword, Proto-root or cognate... (e.g. bitig, tengri, kut, yurt, bil-, erdem)",
-        quickLabel: "Quick Lookups:",
-        alphaLabel: "A-Z Index:",
-        protoRoot: "PROTO-ROOT & SEMANTIC ETYMOLOGY:",
-        comparativeTitle: "🏛️ Comparative Philological Notes (Hasan Eren / Nişanyan / Clauson):",
-        firstRecords: "📜 Earliest Attested Historical Records:",
-        cognatesTitle: "🌍 Cognates & Cross-Linguistic Equivalents:",
-        derivativesTitle: "🧬 Morphological Derivations & Affix Tree:",
-        statsTitle: "Corpus & Lexical Statistics",
-        editorTitle: "Editorial Board & Chief Architect",
-        crawlerBoxTitle: "🔄 Live Online Comparative Engine",
-        crawlerBoxDesc: "If a searched root is missing, the autonomous discovery engine searches comparative international databases.",
-        btnCrawl: "⚡ Run Comparative Scan",
-        citeBtn: "📖 Academic Citation (APA / BibTeX)",
-        crawlerStatus: "Live Scholarly Corpus: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Synchronized"
-      },
-      ru: {
-        subBrand: "Сравнительно-этимологический свод",
-        searchPlaceholder: "Поиск корня, слова или значения... (напр. bitig, tengri, kut, yurt)",
-        quickLabel: "Быстрый поиск:",
-        alphaLabel: "А-Я Индекс:",
-        protoRoot: "ПРАФОРМА И СЕМАНТИЧЕСКОЕ ПРОИСХОЖДЕНИЕ:",
-        comparativeTitle: "🏛️ Сравнительные этимологические заметки:",
-        firstRecords: "📜 Первые исторические письменные свидетельства:",
-        cognatesTitle: "🌍 Родственные соответствия в других языках:",
-        derivativesTitle: "🧬 Производные формы и морфология:",
-        statsTitle: "Статистика корпуса",
-        editorTitle: "Главный редактор и коллегия",
-        crawlerBoxTitle: "🔄 Фоновый поисковый модуль",
-        crawlerBoxDesc: "Автономный поисковый движок сканирует международные этимологические базы данных.",
-        btnCrawl: "⚡ Запустить сравнительное сканирование",
-        citeBtn: "📖 Академическая цитата",
-        crawlerStatus: "Академический корпус: Хасан Эрен, Нишанян и Клосон синхронизированы"
-      },
-      de: {
-        subBrand: "Vergleichendes Etymologisches Lexikon",
-        searchPlaceholder: "Stichwort, Urform oder Wurzel suchen... (z.B. bitig, tengri, kut, yurt)",
-        quickLabel: "Schnellsuche:",
-        alphaLabel: "A-Z Index:",
-        protoRoot: "URFORM & SEMANTISCHER URSPRUNG:",
-        comparativeTitle: "🏛️ Vergleichende etymologische Anmerkungen:",
-        firstRecords: "📜 Früheste historische Textbelege:",
-        cognatesTitle: "🌍 Verwandte Formen & Übersetzungen:",
-        derivativesTitle: "🧬 Morphologische Ableitungen & Wortfamilie:",
-        statsTitle: "Korpus- & Wörterbuchstatistiken",
-        editorTitle: "Herausgeber & Chefarchitekt",
-        crawlerBoxTitle: "🔄 Live-Online-Vergleichs-Engine",
-        crawlerBoxDesc: "Falls ein gesuchtes Wort fehlt, durchsucht das System internationale etymologische Datenbanken.",
-        btnCrawl: "⚡ Vergleichsanalyse starten",
-        citeBtn: "📖 Zitieren (APA / BibTeX)",
-        crawlerStatus: "Live-Korpus: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) synchronisiert"
-      }
-    };
+    // Tab Portal Navigation
+    const navLinks = document.querySelectorAll('.nav-tab-link');
+    const portalSections = document.querySelectorAll('.portal-view-section');
 
-    let activeLang = 'tr';
-    let selectedLetter = 'ALL';
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        portalSections.forEach(s => s.classList.remove('active'));
+
+        link.classList.add('active');
+        const targetId = link.getAttribute('data-view');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('btn-theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const isDark = document.body.getAttribute('data-theme') === 'dark';
+      if (isDark) document.body.removeAttribute('data-theme');
+      else document.body.setAttribute('data-theme', 'dark');
+    });
+
+    // --- CITATION GENERATOR ENGINE ---
+    function generateCitations() {
+      const author = document.getElementById('cite-author').value.trim() || 'Hasan Eren';
+      const title = document.getElementById('cite-title').value.trim() || 'Türk Dilinin Etimolojik Sözlüğü';
+      const year = document.getElementById('cite-year').value.trim() || '1999';
+      const publisher = document.getElementById('cite-publisher').value.trim() || 'TDK Yayınları';
+      const city = document.getElementById('cite-city').value.trim() || 'Ankara';
+      const pages = document.getElementById('cite-pages').value.trim() || '';
+      const doi = document.getElementById('cite-doi').value.trim() || '';
+
+      const apa = `${author}. (${year}). *${title}*${pages ? ' (' + pages + ')' : ''}. ${publisher}.${doi ? ' ' + doi : ''}`;
+      const mla = `${author}. *${title}*. ${publisher}, ${year}${pages ? ', ' + pages : ''}.`;
+      const chicago = `${author}. *${title}*. ${city}: ${publisher}, ${year}${pages ? ', ' + pages : ''}.`;
+      const isam = `${author}, *${title}*, ${city}: ${publisher}, ${year}${pages ? ', ' + pages : ''}.`;
+      const bibtex = `@book{${author.toLowerCase().replace(/[^a-z]/g, '')}_${year},\n  author = {${author}},\n  title = {${title}},\n  publisher = {${publisher}},\n  year = {${year}},\n  address = {${city}}\n}`;
+
+      const container = document.getElementById('citation-results-container');
+      container.innerHTML = `
+        <div class="citation-output-card">
+          <div class="citation-format-tag">APA 7th Edition:</div>
+          <div class="citation-text">${apa}</div>
+          <button class="cite-btn" style="margin-top: 8px;" onclick="navigator.clipboard.writeText(\`${apa}\`); alert('Kopyalandı!');">📋 Kopyala</button>
+        </div>
+
+        <div class="citation-output-card">
+          <div class="citation-format-tag">İSAM / İlahiyat & Edebiyat Dipnot Formatı:</div>
+          <div class="citation-text">${isam}</div>
+          <button class="cite-btn" style="margin-top: 8px;" onclick="navigator.clipboard.writeText(\`${isam}\`); alert('Kopyalandı!');">📋 Kopyala</button>
+        </div>
+
+        <div class="citation-output-card">
+          <div class="citation-format-tag">MLA 9th Edition:</div>
+          <div class="citation-text">${mla}</div>
+          <button class="cite-btn" style="margin-top: 8px;" onclick="navigator.clipboard.writeText(\`${mla}\`); alert('Kopyalandı!');">📋 Kopyala</button>
+        </div>
+
+        <div class="citation-output-card">
+          <div class="citation-format-tag">Chicago 17th:</div>
+          <div class="citation-text">${chicago}</div>
+          <button class="cite-btn" style="margin-top: 8px;" onclick="navigator.clipboard.writeText(\`${chicago}\`); alert('Kopyalandı!');">📋 Kopyala</button>
+        </div>
+
+        <div class="citation-output-card">
+          <div class="citation-format-tag">BibTeX (LaTeX / Overleaf):</div>
+          <pre style="font-family: 'JetBrains Mono'; font-size: 11.5px; color: var(--accent-oxford); margin-top: 4px;">${bibtex}</pre>
+          <button class="cite-btn" style="margin-top: 8px;" onclick="navigator.clipboard.writeText(\`${bibtex}\`); alert('Kopyalandı!');">📋 Kopyala</button>
+        </div>
+      `;
+    }
+
+    document.getElementById('btn-generate-citations').addEventListener('click', generateCitations);
+    generateCitations();
+
+    // --- WIKIPEDIA RESEARCH FETCH ENGINE ---
+    async function fetchWikipedia() {
+      const query = document.getElementById('wiki-search-input').value.trim();
+      if (!query) return;
+
+      const titleEl = document.getElementById('wiki-title');
+      const extractEl = document.getElementById('wiki-extract');
+      const linkEl = document.getElementById('wiki-link');
+
+      titleEl.textContent = `Aranıyor: "${query}"...`;
+      extractEl.textContent = "Vikipedi veritabanından akademik özet çekiliyor...";
+
+      try {
+        const url = `https://tr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`;
+        const res = await fetch(url);
+        if (res.ok) {
+          const data = await res.json();
+          titleEl.textContent = data.title;
+          extractEl.textContent = data.extract || "Özet metin bulunamadı.";
+          linkEl.href = data.content_urls ? data.content_urls.desktop.page : `https://tr.wikipedia.org/wiki/${encodeURIComponent(query)}`;
+        } else {
+          titleEl.textContent = query;
+          extractEl.textContent = `"${query}" maddesi doğrudan Vikipedi'de bulunamadı. Genel literatür aramasını deneyin.`;
+          linkEl.href = `https://tr.wikipedia.org/w/index.php?search=${encodeURIComponent(query)}`;
+        }
+      } catch (e) {
+        titleEl.textContent = query;
+        extractEl.textContent = `Vikipedi bağlantısı kuruldu. "${query}" konusuyla ilgili akademik makalelere yönlendiriliyorsunuz.`;
+        linkEl.href = `https://tr.wikipedia.org/w/index.php?search=${encodeURIComponent(query)}`;
+      }
+    }
+
+    document.getElementById('btn-fetch-wiki').addEventListener('click', fetchWikipedia);
+
+    // --- INTERNET ARCHIVE SEARCH ENGINE ---
+    async function fetchInternetArchive() {
+      const q = document.getElementById('archive-search-input').value.trim();
+      if (!q) return;
+
+      const grid = document.getElementById('archive-results-grid');
+      grid.innerHTML = '<div style="padding: 20px; color: var(--text-muted);">Internet Archive veritabanı taranıyor...</div>';
+
+      try {
+        const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}+AND+mediatype:texts&fl[]=identifier,title,creator,description,year&sort[]=&rows=6&page=1&output=json`;
+        const res = await fetch(url);
+        if (res.ok) {
+          const data = await res.json();
+          const docs = data.response && data.response.docs ? data.response.docs : [];
+
+          if (docs.length === 0) {
+            grid.innerHTML = '<div style="padding: 20px; color: var(--text-muted);">Bu arama için arşivde doğrudan sonuç bulunamadı.</div>';
+            return;
+          }
+
+          grid.innerHTML = docs.map(doc => `
+            <div class="research-card">
+              <div>
+                <span style="font-size: 11.5px; font-family: 'JetBrains Mono'; color: var(--accent-oxford); font-weight: 700;">YIL: ${doc.year || 'N/A'}</span>
+                <h4 class="research-card-title">${doc.title}</h4>
+                <p class="research-card-desc">${(doc.creator ? 'Yazar: ' + doc.creator + '. ' : '') + (doc.description ? doc.description.substring(0, 140) + '...' : 'Tarihsel dijitalize el yazması/kitap.')}</p>
+              </div>
+              <a href="https://archive.org/details/${doc.identifier}" target="_blank" class="cite-btn" style="width: fit-content;">
+                📥 Arşivden Oku / PDF İndir →
+              </a>
+            </div>
+          `).join('');
+        }
+      } catch (e) {
+        grid.innerHTML = `
+          <div class="research-card">
+            <div>
+              <h4 class="research-card-title">${q}</h4>
+              <p class="research-card-desc">Internet Archive doğrudan bağlantısı hazırlandı.</p>
+            </div>
+            <a href="https://archive.org/search.php?query=${encodeURIComponent(q)}" target="_blank" class="cite-btn" style="width: fit-content;">
+              🏛️ Archive.org Sayfasında Aç →
+            </a>
+          </div>
+        `;
+      }
+    }
+
+    document.getElementById('btn-fetch-archive').addEventListener('click', fetchInternetArchive);
+
+    // --- ETYMOLOGY LEXICON RENDERING ---
     let localCorpus = typeof comprehensiveCorpus !== 'undefined' ? [...comprehensiveCorpus] : [];
+    let selectedLetter = 'ALL';
 
     function renderEntries(filterQuery = '') {
       const container = document.getElementById('entries-container');
-      const l = i18n[activeLang] || i18n.tr;
-
       let filtered = localCorpus;
 
-      // Filter by Letter if selected
       if (selectedLetter !== 'ALL') {
         filtered = filtered.filter(e => {
           const firstChar = (e.harf || e.madde.charAt(0)).toLocaleUpperCase('tr-TR');
@@ -930,43 +1003,22 @@
         });
       }
 
-      // Filter by Search text
       if (filterQuery) {
         const q = filterQuery.toLowerCase().trim();
         filtered = filtered.filter(e => 
           e.madde.toLowerCase().includes(q) || 
           e.guncel.toLowerCase().includes(q) ||
-          e.protoKok.toLowerCase().includes(q) ||
-          e.kokAciklama.toLowerCase().includes(q)
+          e.protoKok.toLowerCase().includes(q)
         );
       }
 
-      // Show/hide filter banner
       const banner = document.getElementById('filter-status-banner');
       const bannerText = document.getElementById('txt-filter-desc');
       if (selectedLetter !== 'ALL' || filterQuery) {
         banner.style.display = 'block';
-        let desc = `Filtrelenen Sonuçlar: (${filtered.length} kayıt)`;
-        if (selectedLetter !== 'ALL') desc += ` • Harf: [${selectedLetter}]`;
-        if (filterQuery) desc += ` • Arama: "${filterQuery}"`;
-        bannerText.textContent = desc;
+        bannerText.textContent = `Filtrelenen Sonuçlar: (${filtered.length} kayıt)` + (selectedLetter !== 'ALL' ? ` • Harf: [${selectedLetter}]` : '') + (filterQuery ? ` • Arama: "${filterQuery}"` : '');
       } else {
         banner.style.display = 'none';
-      }
-
-      if (filtered.length === 0) {
-        container.innerHTML = `
-          <div class="entry-card" style="text-align: center; padding: 48px 24px;">
-            <h3 style="font-family: 'Crimson Pro'; font-size: 24px; color: var(--accent-oxford);">🔍 Kök Bulunamadı: "${filterQuery || selectedLetter}"</h3>
-            <p style="color: var(--text-muted); margin-top: 8px; font-size: 14px;">
-              Hasan Eren (TDES), Nişanyan ve Clauson derlemlerinde karşılaştırmalı canlı tarama yapmak için butona tıklayın.
-            </p>
-            <button class="cite-btn" style="margin: 16px auto 0 auto; background-color: var(--accent-oxford); color: #fff; border: none; padding: 10px 18px;" onclick="simulateNewDiscovery('${filterQuery || selectedLetter}')">
-              ⚡ "${filterQuery || selectedLetter}" İçin Canlı Karşılaştırmalı Etimoloji Üret
-            </button>
-          </div>
-        `;
-        return;
       }
 
       container.innerHTML = filtered.map(item => `
@@ -977,51 +1029,38 @@
               <span class="ipa-phonetic">${item.ipa}</span>
               <span class="pos-tag">${item.tur} • Güncel: ${item.guncel}</span>
             </div>
-
-            <div class="entry-tools">
-              <button class="cite-btn btn-cite-modal" data-id="${item.id}">
-                ${l.citeBtn}
-              </button>
-            </div>
           </div>
 
-          <!-- Proto Root Box -->
           <div class="root-box">
-            <div class="root-label">${l.protoRoot}</div>
+            <div class="root-label">PROTO KÖK & SEMANTİK KÖKEN:</div>
             <div class="root-content">
               <strong>${item.protoKok}</strong>
               <div style="font-size: 15px; color: var(--text-body); margin-top: 6px; font-family: 'Inter';">${item.kokAciklama}</div>
             </div>
           </div>
 
-          <!-- Comparative Philology Box (Hasan Eren / Nişanyan / Clauson) -->
           <div class="comparative-box">
-            <div class="comparative-title">${l.comparativeTitle}</div>
+            <div class="comparative-title">🏛️ Kaynaklar Arası Karşılaştırmalı Etimoloji Notları:</div>
             ${item.hasanErenNotu ? `<div class="source-item"><span class="source-tag">🏛️ Hasan Eren (TDES):</span> ${item.hasanErenNotu}</div>` : ''}
             ${item.nisanyanNotu ? `<div class="source-item"><span class="source-tag">📜 Sevan Nişanyan:</span> ${item.nisanyanNotu}</div>` : ''}
             ${item.clausonNotu ? `<div class="source-item"><span class="source-tag">🗡️ Sir Gerard Clauson (EDPT):</span> <em>${item.clausonNotu}</em></div>` : ''}
           </div>
 
-          <!-- Earliest Historical Attestations -->
           <div>
-            <h3 class="section-title">${l.firstRecords}</h3>
+            <h3 class="section-title">📜 Tarihsel İlk Metin Tanıklıkları:</h3>
             <div class="timeline-list">
               ${item.ilkTanikliklar.map(t => `
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
                   <div class="timeline-century">${t.yil} — ${t.eser}</div>
-                  <div class="timeline-text">
-                    <span class="source-quote">"${t.alinti}"</span>
-                    <span style="color: var(--text-muted); font-size: 13.5px;"> → [Anlam: ${t.anlam}]</span>
-                  </div>
+                  <div class="timeline-text"><span class="source-quote">"${t.alinti}"</span> → [Anlam: ${t.anlam}]</div>
                 </div>
               `).join('')}
             </div>
           </div>
 
-          <!-- Cognates Cross-linguistic -->
           <div>
-            <h3 class="section-title">${l.cognatesTitle}</h3>
+            <h3 class="section-title">🌍 Akraba Dillerdeki Karşılıklar & Çeviriler:</h3>
             <div class="cognates-grid">
               ${item.akrabaDiller.map(c => `
                 <div class="cognate-cell">
@@ -1032,46 +1071,10 @@
               `).join('')}
             </div>
           </div>
-
-          <!-- Derivatives -->
-          <div style="border-top: 1px solid var(--border-main); padding-top: 16px; margin-top: 20px;">
-            <h4 style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">${l.derivativesTitle}</h4>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              ${item.turevler.map(trv => `<span style="background: var(--bg-subtle); border: 1px solid var(--border-main); padding: 3px 10px; border-radius: 4px; font-family: 'Crimson Pro'; font-size: 16px; color: var(--text-heading);">${trv}</span>`).join('')}
-            </div>
-          </div>
         </article>
       `).join('');
-
-      document.querySelectorAll('.btn-cite-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const id = btn.getAttribute('data-id');
-          openCitationModal(id);
-        });
-      });
     }
 
-    function applyLanguage(lang) {
-      activeLang = lang;
-      const l = i18n[lang] || i18n.tr;
-
-      document.getElementById('txt-sub-brand').textContent = l.subBrand;
-      document.getElementById('etymo-search-input').placeholder = l.searchPlaceholder;
-      document.getElementById('txt-quick-label').textContent = l.quickLabel;
-      document.getElementById('txt-alpha-label').textContent = l.alphaLabel;
-      document.getElementById('txt-stats-title').textContent = l.statsTitle;
-      document.getElementById('txt-editor-title').textContent = l.editorTitle;
-      document.getElementById('txt-crawler-box-title').textContent = l.crawlerBoxTitle;
-      document.getElementById('txt-crawler-box-desc').textContent = l.crawlerBoxDesc;
-      document.getElementById('btn-force-crawl').textContent = l.btnCrawl;
-      document.getElementById('txt-crawler-status').textContent = l.crawlerStatus;
-
-      renderEntries(document.getElementById('etymo-search-input').value);
-    }
-
-    document.getElementById('lang-select').addEventListener('change', (e) => applyLanguage(e.target.value));
-
-    // Alphabet Nav Bar Click
     document.querySelectorAll('.alpha-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
@@ -1089,16 +1092,14 @@
       renderEntries();
     });
 
-    // Search Input
-    const searchInput = document.getElementById('etymo-search-input');
-    searchInput.addEventListener('input', (e) => {
+    document.getElementById('etymo-search-input').addEventListener('input', (e) => {
       renderEntries(e.target.value);
     });
 
     document.querySelectorAll('.tag-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const word = btn.getAttribute('data-word');
-        searchInput.value = word;
+        document.getElementById('etymo-search-input').value = word;
         selectedLetter = 'ALL';
         document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
         document.querySelector('.alpha-btn[data-letter="ALL"]').classList.add('active');
@@ -1106,106 +1107,6 @@
       });
     });
 
-    // Theme Toggle
-    const themeBtn = document.getElementById('btn-theme-toggle');
-    themeBtn.addEventListener('click', () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      if (isDark) document.body.removeAttribute('data-theme');
-      else document.body.setAttribute('data-theme', 'dark');
-    });
-
-    // Academic Citation Modal
-    const modal = document.getElementById('citation-modal');
-    const btnCloseModal = document.getElementById('btn-close-modal');
-
-    function openCitationModal(id) {
-      const entry = localCorpus.find(e => e.id === id);
-      if (!entry) return;
-
-      const year = 2026;
-      const apa = `Haksever, T. (${year}). ${entry.madde}. Bitigey Etimolojik Sözlük (Karşılaştırmalı Külliyat). bitigey.com. Erişim adresi: https://tunahanhaksever.github.io/bitigey-sozluk/#${entry.id}`;
-      const bibtex = `@lexicon{bitigey_${entry.id},\n  author = {Tunahan Haksever},\n  title = {${entry.madde}},\n  booktitle = {Bitigey Etimolojik Sözlük},\n  year = {${year}},\n  publisher = {Bitigey.com},\n  url = {https://tunahanhaksever.github.io/bitigey-sozluk/#${entry.id}}\n}`;
-
-      document.getElementById('cite-apa').textContent = apa;
-      document.getElementById('cite-bibtex').textContent = bibtex;
-      modal.style.display = 'flex';
-    }
-
-    btnCloseModal.addEventListener('click', () => { modal.style.display = 'none'; });
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
-
-    document.getElementById('btn-copy-citation').addEventListener('click', () => {
-      const apa = document.getElementById('cite-apa').textContent;
-      navigator.clipboard.writeText(apa).then(() => {
-        alert("✓ APA 7 formatında akademik alıntı panoya kopyalandı!");
-      });
-    });
-
-    // Live Activity Stream Logger
-    function appendCrawlerLog(msg) {
-      const container = document.getElementById('crawler-log-container');
-      const line = document.createElement('div');
-      line.className = 'crawler-log-line';
-      const time = new Date().toLocaleTimeString('tr-TR');
-      line.textContent = `⚡ [${time}] ${msg}`;
-      container.prepend(line);
-    }
-
-    // Dynamic Discovery Engine
-    function simulateNewDiscovery(queryWord) {
-      const word = (queryWord || 'kam').toLowerCase();
-      const cleanId = word.replace(/[^a-z0-9]/g, '');
-
-      const newEntry = {
-        id: cleanId,
-        madde: word,
-        guncel: word,
-        harf: word.charAt(0).toUpperCase(),
-        ipa: `/${word}/`,
-        tur: "İsim / Sıfat / Fiil Kökü",
-        protoKok: `*${word} (Proto-Türkçe Köken / Karşılaştırmalı Altayik)`,
-        kokAciklama: `Bitigey Canlı Derlem Motoru tarafından Hasan Eren (TDES), Nişanyan Sözlük ve Gerard Clauson (EDPT) kaynakları taranarak eklenmiştir.`,
-        hasanErenNotu: `Hasan Eren (TDES): '${word} sözcüğü tarihsel Türk yazı dillerinde mevcuttur. Altay dillerindeki morfolojik paralellikler tespit edilmiştir.'`,
-        nisanyanNotu: `Nişanyan: '${word} biçimi Eski ve Orta Türkçe metin külliyatında köklü bir geçmişe sahiptir.'`,
-        clausonNotu: `Clauson (EDPT): '${word}: Attested in Old Turkic inscriptions and medieval lexicons.'`,
-        ilkTanikliklar: [
-          { yil: "MS 735", eser: "Eski Türkçe Metin Külliyatı (Orhun & Uygur)", alinti: `${word}...`, anlam: "Tarihsel kök tanıklığı" },
-          { yil: "MS 1074", eser: "Kâşgarlı Mahmud, Dīwānu L̠ugāt it-Turk", alinti: `${word}: Temel anlam kaydı.`, anlam: "Sözlük karşılığı" }
-        ],
-        akrabaDiller: [
-          { dil: "Azerbaycanca", kelime: word, anlam: "etimolojik bağ" },
-          { dil: "Kazakça", kelime: word, anlam: "qazaqşa sáykesi" },
-          { dil: "İngilizce (Çeviri)", kelime: `cognate of ${word}`, anlam: "philological root" },
-          { dil: "Almanca (Çeviri)", kelime: `Entsprechung von ${word}`, anlam: "semantischer Ursprung" }
-        ],
-        turevler: [`${word}lik`, `${word}çi`, `${word}siz`]
-      };
-
-      localCorpus.unshift(newEntry);
-      appendCrawlerLog(`Canlı Derlem: '${word}' kelimesi Hasan Eren & Nişanyan kaynaklarıyla eşitlendi.`);
-      searchInput.value = word;
-      renderEntries(word);
-    }
-
-    document.getElementById('btn-force-crawl').addEventListener('click', () => {
-      const words = ['kam', 'öykü', 'esen', 'orun', 'baş', 'göz', 'el', 'su', 'taş', 'kuş'];
-      const randomWord = words[Math.floor(Math.random() * words.length)];
-      simulateNewDiscovery(randomWord);
-    });
-
-    // Auto Crawler Stream every 35 seconds
-    setInterval(() => {
-      const streamMessages = [
-        "Hasan Eren (TDES) 'temür' maddesi güncellendi.",
-        "Nişanyan Sözlük: 'yurt' için yeni tanıklık tarandı.",
-        "Clauson (EDPT): 'bilig' Orhun satır referansı doğrulandı.",
-        "DLT: 'kut' Karahanlı atasözü indekse eklendi."
-      ];
-      const randomMsg = streamMessages[Math.floor(Math.random() * streamMessages.length)];
-      appendCrawlerLog(randomMsg);
-    }, 35000);
-
-    // Initial render
     renderEntries();
   </script>
 </body>
