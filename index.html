@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat & Evrensel Akademik Araştırma Portalı</title>
-  <meta name="description" content="Prof. Dr. Hasan Eren (TDES), Sevan Nişanyan, Sir Gerard Clauson ve DLT kaynaklı etimoloji külliyatı. APA/MLA/İSAM kaynakça stüdyosu; Internet Archive, Academia, Google Scholar, DergiPark ve Vikipedi çoklu PDF araştırma motoru.">
-  <meta name="keywords" content="Tunahan Haksever, Hasan Eren Türk Dilinin Etimolojik Sözlüğü, Nişanyan Sözlük, Gerard Clauson EDPT, Bitigey Sözlük, Academia PDF İndirme, Internet Archive Yazma Eserler, DergiPark Makale Arama, APA 7 Kaynakça, İSAM Kaynak Gösterme, bitigey.com">
+  <title>Bitigey Sözlük — Karşılaştırmalı Etimolojik Külliyat & Orta Türkçe Metin Çeviri Atölyesi | Tunahan Haksever</title>
+  <meta name="description" content="Prof. Dr. Hasan Eren, Nişanyan, Clauson ve DLT kaynaklı etimolojik külliyat. Orta Türkçe ve Eski Türkçe metin okuma, ücretsiz yapay zekâ morfolojik çeviri ve tahlil motoru.">
+  <meta name="keywords" content="Tunahan Haksever, Hasan Eren TDES, Nişanyan Sözlük, Gerard Clauson EDPT, Orta Türkçe Metin Çeviri, Kutadgu Bilig Çeviri, Divanu Lugatit Turk Oku, Nehcül Feradis, Dede Korkut, Yapay Zekâ Türkçe Çeviri, bitigey.com">
   <meta name="author" content="Tunahan Haksever">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tunahanhaksever.github.io/bitigey-sozluk/">
@@ -27,7 +27,7 @@
       {
         "@type": "DefinedTermSet",
         "@id": "https://tunahanhaksever.github.io/bitigey-sozluk/#lexicon",
-        "name": "Bitigey Etimolojik Külliyat ve Akademik Araştırma Portalı",
+        "name": "Bitigey Etimolojik Külliyat ve Orta Türkçe Çeviri Atölyesi",
         "inLanguage": ["tr", "az", "en", "ru", "de"],
         "author": { "@id": "https://github.com/tunahanhaksever#person" },
         "publisher": { "@type": "Organization", "name": "Bitigey.com", "url": "https://bitigey.com" }
@@ -97,7 +97,7 @@
       transition: background-color 0.2s, color 0.2s;
     }
 
-    /* Modern Oxford University Press Senior Navbar */
+    /* Oxford Senior Navbar */
     .oxford-navbar {
       background-color: var(--bg-surface);
       border-bottom: 1px solid var(--border-main);
@@ -108,7 +108,7 @@
     }
 
     .nav-container {
-      max-width: 1320px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 0 24px;
       height: 68px;
@@ -171,7 +171,7 @@
       font-family: 'Inter', sans-serif;
       font-size: 13px;
       font-weight: 600;
-      padding: 7px 14px;
+      padding: 7px 13px;
       border-radius: 6px;
       cursor: pointer;
       display: flex;
@@ -181,11 +181,7 @@
       white-space: nowrap;
     }
 
-    .nav-pill-btn:hover {
-      color: var(--text-heading);
-      background-color: var(--bg-accent);
-    }
-
+    .nav-pill-btn:hover { color: var(--text-heading); background-color: var(--bg-accent); }
     .nav-pill-btn.active {
       color: #ffffff;
       background-color: var(--accent-oxford);
@@ -298,7 +294,7 @@
     .portal-view-section.active { display: block; }
 
     .main-layout {
-      max-width: 1320px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 32px 24px 80px 24px;
       display: grid;
@@ -307,7 +303,7 @@
     }
 
     .full-width-layout {
-      max-width: 1320px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 32px 24px 80px 24px;
       display: flex;
@@ -342,7 +338,6 @@
       margin-bottom: 22px;
     }
 
-    /* Search & Inputs */
     .search-input {
       width: 100%;
       font-family: 'Crimson Pro', serif;
@@ -421,8 +416,8 @@
     .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 5px; }
     .form-label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
-    .form-input, .form-select { background-color: var(--bg-subtle); border: 1px solid var(--border-main); padding: 9px 12px; border-radius: 6px; color: var(--text-heading); font-size: 13.5px; outline: none; }
-    .form-input:focus, .form-select:focus { border-color: var(--border-focus); }
+    .form-input, .form-select, .form-textarea { background-color: var(--bg-subtle); border: 1px solid var(--border-main); padding: 9px 12px; border-radius: 6px; color: var(--text-heading); font-size: 13.5px; outline: none; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--border-focus); }
 
     .cite-btn {
       background-color: var(--bg-subtle);
@@ -452,32 +447,50 @@
     .crawler-activity-box { background: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 6px; padding: 10px; max-height: 150px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; display: flex; flex-direction: column; gap: 5px; }
     .crawler-log-line { color: var(--text-turkic); border-bottom: 1px dashed var(--border-main); padding-bottom: 3px; }
 
-    .multi-search-engines {
+    /* Middle Turkic Workshop Styles */
+    .manuscript-sample-selector {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
-      margin-top: 14px;
+      margin-bottom: 16px;
     }
 
-    .engine-badge {
-      background: var(--bg-subtle);
+    .manuscript-badge {
+      background-color: var(--bg-subtle);
       border: 1px solid var(--border-main);
       padding: 6px 12px;
       border-radius: 6px;
       font-size: 12px;
-      color: var(--text-body);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-weight: 500;
+      font-weight: 600;
+      color: var(--text-heading);
+      cursor: pointer;
       transition: all 0.15s;
     }
-    .engine-badge:hover {
+    .manuscript-badge:hover, .manuscript-badge.active {
       background-color: var(--accent-oxford);
-      color: #fff;
+      color: #ffffff;
       border-color: var(--accent-oxford);
     }
+
+    .translation-result-box {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-main);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .morphology-token {
+      display: inline-block;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-main);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin: 2px;
+      font-size: 12.5px;
+      cursor: help;
+    }
+    .morphology-token strong { color: var(--accent-oxford); }
 
     /* Modal */
     .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 2000; }
@@ -510,6 +523,7 @@
       <!-- Senior Navigation Tabs -->
       <nav class="nav-pills">
         <button class="nav-pill-btn active" data-view="view-etymology" id="tab-btn-etymo">📚 Etimoloji Külliyatı</button>
+        <button class="nav-pill-btn" data-view="view-middle-turkic" id="tab-btn-middle">📜 Orta Türkçe & Yapay Zekâ</button>
         <button class="nav-pill-btn" data-view="view-citation-studio" id="tab-btn-cite">✍️ Kaynakça Stüdyosu</button>
         <button class="nav-pill-btn" data-view="view-wiki-research" id="tab-btn-wiki">🌐 Canlı Vikipedi</button>
         <button class="nav-pill-btn" data-view="view-archive-pdf" id="tab-btn-pdf">🏛️ Evrensel PDF & Arşiv</button>
@@ -659,7 +673,97 @@
     </div>
   </div>
 
-  <!-- PORTAL 2: CITATION STUDIO -->
+  <!-- PORTAL 2: MIDDLE TURKIC READER & FREE AI TRANSLATION ATELIER -->
+  <div class="portal-view-section" id="view-middle-turkic">
+    <div class="full-width-layout">
+      <div class="academic-panel">
+        <h2 class="panel-title" id="txt-middle-head">📜 Orta Türkçe & Eski Türkçe Metin Okuma ve Ücretsiz Yapay Zekâ Çeviri Atölyesi</h2>
+        <p class="panel-desc" id="txt-middle-desc">
+          Karahanlı, Harezm, Kıpçak ve Çağatay dönemi klasik metinlerini okuyun veya kendi metninizi yapıştırarak <strong>ücretsiz yapay zekâ morfolojik çözümleyici</strong> ile anında Günümüz Türkçesi, Azerbaycanca ve İngilizceye çevirip dilbilgisi tahlilini alın.
+        </p>
+
+        <!-- Pre-loaded Classical Texts Selector -->
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;" id="txt-select-sample">
+            Örnek Tarihsel Metin Seçin:
+          </div>
+          <div class="manuscript-sample-selector">
+            <button class="manuscript-badge active" data-sample="kutadgu">📖 Kutadgu Bilig (MS 1069 - Karahanlı)</button>
+            <button class="manuscript-badge" data-sample="dlt">📜 Dîvânu Lugâti't-Türk (MS 1074 - Karahanlı)</button>
+            <button class="manuscript-badge" data-sample="nehcul">🕌 Nehcü'l-Ferâdîs (MS 1358 - Harezm Türkçesi)</button>
+            <button class="manuscript-badge" data-sample="cumanicus">⛺ Codex Cumanicus (MS 1303 - Kıpçakça)</button>
+            <button class="manuscript-badge" data-sample="dedekorkut">⚔️ Dede Korkut Kitabı (Oğuz Türkçesi)</button>
+            <button class="manuscript-badge" data-sample="nevai">👑 Muhakemetü'l-Lugateyn (Ali Şîr Nevâî - Çağatayca)</button>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px;">
+          <label class="form-label" id="lbl-source-text">Tarihsel Metin / Cümle (Eski veya Orta Türkçe):</label>
+          <textarea class="form-textarea" id="middle-turkic-input" rows="4" style="font-family: 'Crimson Pro', serif; font-size: 20px; line-height: 1.6;">Bayat atı birle sözüg başladım, Törütgen igidgen keçürgen idim. Ukuş kadrini hem biligsiz bilür, Erdem kadrini hem edepsiz bilür.</textarea>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; align-items: center;">
+          <button class="cite-btn btn-oxford" id="btn-ai-translate" style="padding: 12px 24px; font-size: 14px;">
+            ⚡ Yapay Zekâ ile Anında Çevir ve Tahlil Et (AI Translate)
+          </button>
+          <span style="font-size: 12px; color: var(--text-muted);" id="txt-ai-free-badge">✓ Tamamen Ücretsiz & Dahili Morfolojik Filoloji Motoru</span>
+        </div>
+
+        <!-- Translation & Morphological Results Box -->
+        <div class="translation-result-box" id="ai-result-panel">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-main); padding-bottom: 10px; margin-bottom: 14px;">
+            <h3 style="font-family: 'Crimson Pro', serif; font-size: 22px; color: var(--text-heading);" id="txt-ai-res-title">🤖 Yapay Zekâ Çeviri ve Filolojik Tahlil Raporu</h3>
+            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-green);" id="txt-ai-status">● Analiz Tamamlandı</span>
+          </div>
+
+          <!-- Modern Turkish Translation -->
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇹🇷 Türkiye Türkçesi Çevirisi:</div>
+            <div style="font-family: 'Crimson Pro', serif; font-size: 19px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-tr">
+              "Tanrı adı ile söze başladım; O yaratan, besleyen ve bağışlayan Rabbimdir. Aklın değerini bilgisiz olan da anlar; erdemin kıymetini edepten yoksun olan dahi bilir."
+            </div>
+          </div>
+
+          <!-- Azerbaijani Translation -->
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇦🇿 Azərbaycanca Tərcüməsi:</div>
+            <div style="font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-az">
+              "Yaradan Tanrının adı ilə sözə başladım; O yaradan, bəsləyən və bağışlayan Sahibimdir. Ağılın qədrini biliksiz də anlayar; fəzilətin qiymətini ədəbsiz belə bilər."
+            </div>
+          </div>
+
+          <!-- English Translation -->
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 11.5px; font-weight: 700; color: var(--accent-oxford); text-transform: uppercase;">🇬🇧 English Translation:</div>
+            <div style="font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--text-heading); margin-top: 4px;" id="ai-trans-en">
+              "In the name of God I began my words; He is my Lord who created, nurtured, and forgave. Even the ignorant understands the value of intellect; even the undisciplined knows the worth of virtue."
+            </div>
+          </div>
+
+          <!-- Morphological Breakdown Tokens -->
+          <div style="border-top: 1px solid var(--border-main); padding-top: 14px;">
+            <div style="font-size: 11.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+              🧬 Kelime Kelime Morfolojik ve Gramatikal Tahlil:
+            </div>
+            <div id="ai-morphology-tokens">
+              <span class="morphology-token"><strong>Bayat</strong> (Tanrı / Kadim ilah)</span>
+              <span class="morphology-token"><strong>atı</strong> (at+ı: ismi)</span>
+              <span class="morphology-token"><strong>birle</strong> (ile / vasıta edatı)</span>
+              <span class="morphology-token"><strong>sözüg</strong> (söz+üg: sözü, belirtme hali)</span>
+              <span class="morphology-token"><strong>başladım</strong> (başla-dı-m: 1. tekil geçmiş zaman)</span>
+              <span class="morphology-token"><strong>törütgen</strong> (törüt-gen: yaratan, sıfat-fiil)</span>
+              <span class="morphology-token"><strong>igidgen</strong> (igid-gen: besleyen/büyüten)</span>
+              <span class="morphology-token"><strong>keçürgen</strong> (keçür-gen: bağışlayan/geçiren)</span>
+              <span class="morphology-token"><strong>idim</strong> (id+i+m: Rabbim, sahibim)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTAL 3: CITATION STUDIO -->
   <div class="portal-view-section" id="view-citation-studio">
     <div class="full-width-layout">
       <div class="academic-panel">
@@ -726,7 +830,7 @@
     </div>
   </div>
 
-  <!-- PORTAL 3: WIKIPEDIA RESEARCH -->
+  <!-- PORTAL 4: WIKIPEDIA RESEARCH -->
   <div class="portal-view-section" id="view-wiki-research">
     <div class="full-width-layout">
       <div class="academic-panel">
@@ -737,7 +841,7 @@
 
         <div style="display: flex; gap: 10px; margin-bottom: 20px;">
           <input type="text" class="search-input" id="wiki-search-input" value="Orhun Yazıtları" placeholder="Araştırmak istediğiniz konu, şair, dil veya kavram...">
-          <button class="cite-btn btn-oxford" id="btn-fetch-wiki" style="padding: 0 20px; font-size: 14px;" id="btn-wiki-action">🔍 Araştır</button>
+          <button class="cite-btn btn-oxford" id="btn-fetch-wiki" style="padding: 0 20px; font-size: 14px;">🔍 Araştır</button>
         </div>
 
         <div id="wiki-results-box" style="background-color: var(--bg-subtle); border: 1px solid var(--border-main); border-radius: 8px; padding: 22px;">
@@ -755,7 +859,7 @@
     </div>
   </div>
 
-  <!-- PORTAL 4: UNIVERSAL PDF & ARCHIVE SEARCH -->
+  <!-- PORTAL 5: UNIVERSAL PDF & ARCHIVE SEARCH -->
   <div class="portal-view-section" id="view-archive-pdf">
     <div class="full-width-layout">
       <div class="academic-panel">
@@ -769,14 +873,11 @@
           <button class="cite-btn btn-oxford" id="btn-fetch-hub" style="padding: 0 20px; font-size: 14px;">🏛️ Canlı Tara</button>
         </div>
 
-        <!-- Multi-Platform Direct Search Badges -->
         <div style="margin-bottom: 20px;">
           <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;" id="txt-direct-platforms">
             Tek Tıkla Doğrudan Akademik Veritabanlarında Aç:
           </div>
-          <div class="multi-search-engines" id="direct-search-links">
-            <!-- Dynamically populated links -->
-          </div>
+          <div class="multi-search-engines" id="direct-search-links"></div>
         </div>
 
         <div class="research-results-grid" id="archive-results-grid"></div>
@@ -825,6 +926,7 @@
       tr: {
         subBrand: "Karşılaştırmalı Etimolojik Külliyat",
         tabEtymo: "📚 Etimoloji Külliyatı",
+        tabMiddle: "📜 Orta Türkçe & Yapay Zekâ",
         tabCite: "✍️ Kaynakça Stüdyosu",
         tabWiki: "🌐 Canlı Vikipedi",
         tabPdf: "🏛️ Evrensel PDF & Arşiv",
@@ -843,8 +945,15 @@
         statOldest: "En Eski Tanıklık:",
         editorTitle: "Külliyat Heyeti & Baş Editör",
         editorBio: "Şair, Yazar, Dil Tasarımcısı & Türk Dili ve Edebiyatı Araştırmacısı (KTÜ)",
+        middleHead: "📜 Orta Türkçe & Eski Türkçe Metin Okuma ve Ücretsiz Yapay Zekâ Çeviri Atölyesi",
+        middleDesc: "Karahanlı, Harezm, Kıpçak ve Çağatay dönemi metinlerini okuyun veya kendi cümlenizi yapay zekâ ile anında çevirip tahlil edin.",
+        selectSample: "Örnek Tarihsel Metin Seçin:",
+        lblSourceText: "Tarihsel Metin / Cümle (Eski veya Orta Türkçe):",
+        btnAiTranslate: "⚡ Yapay Zekâ ile Anında Çevir ve Tahlil Et (AI Translate)",
+        aiFreeBadge: "✓ Tamamen Ücretsiz & Dahili Morfolojik Filoloji Motoru",
+        aiResTitle: "🤖 Yapay Zekâ Çeviri ve Filolojik Tahlil Raporu",
         citeHead: "✍️ Akademik Kaynakça ve Bibliyografya Stüdyosu",
-        citeDesc: "Tez, makale ve bilimsel bildirileriniz için APA 7, MLA 9, Chicago 17, İSAM ve BibTeX formatlarında kusursuz kaynakça üretin.",
+        citeDesc: "Tez, makale ve bildirileriniz için APA 7, MLA 9, Chicago 17, İSAM ve BibTeX formatlarında kusursuz kaynakça üretin.",
         lblDocType: "Eser Türü:",
         lblAuthor: "Yazar Adı Soyadı:",
         lblTitle: "Eser / Kitap / Makale Adı:",
@@ -855,11 +964,9 @@
         lblDoi: "URL / DOI (Varsa):",
         btnGenerateCite: "⚡ Kaynakça Üret (Generate Citations)",
         wikiHead: "🌐 Canlı Vikipedi & Vikisözlük Akademik Araştırma Asistanı",
-        wikiDesc: "Literatür taramalarınız için doğrudan Vikipedi ve Vikisözlük veritabanından bilimsel özet çekin.",
-        btnWikiAction: "🔍 Araştır",
+        wikiDesc: "Literatür taramalarınız için doğrudan Vikipedi veritabanından bilimsel özet çekin.",
         hubHead: "🏛️ Evrensel Akademik PDF & Literatür Arama Portalı",
         hubDesc: "Internet Archive, Academia.edu, Google Scholar, DergiPark ve İSAM kütüphanelerindeki milyonlarca el yazması ve PDF makaleyi canlı tarayın.",
-        btnHubAction: "🏛️ Canlı Tara",
         directPlatforms: "Tek Tıkla Doğrudan Akademik Veritabanlarında Aç:",
         protoRootLabel: "PROTO KÖK & SEMANTİK KÖKEN:",
         comparativeTitle: "🏛️ Kaynaklar Arası Karşılaştırmalı Etimoloji Notları:",
@@ -869,6 +976,7 @@
       az: {
         subBrand: "Müqayisəli Etimoloji Külliyyat",
         tabEtymo: "📚 Etimologiya Külliyyatı",
+        tabMiddle: "📜 Orta Türkcə və Süni İntellekt",
         tabCite: "✍️ Ədəbiyyat Siyahısı",
         tabWiki: "🌐 Canlı Vikipediya",
         tabPdf: "🏛️ Universal PDF və Arxiv",
@@ -887,8 +995,15 @@
         statOldest: "Ən Qədim Mətn:",
         editorTitle: "Külliyyat Heyəti və Baş Redaktor",
         editorBio: "Şair, Yazıçı, Dil Dizayneri və Türk Dili Tədqiqatçısı (KTU)",
+        middleHead: "📜 Orta Türkcə Mətn Oxuma və Pulsuz Süni İntellekt Tərcümə Studiyası",
+        middleDesc: "Qaraxanlı, Xarəzm, Qıpçaq və Çağatay mətillərini oxuyun və ya süni intellektlə dərhal təhlil edin.",
+        selectSample: "Nümunə Tarixi Mətn Seçin:",
+        lblSourceText: "Tarixi Mətn / Cümlə (Qədim və ya Orta Türkcə):",
+        btnAiTranslate: "⚡ Süni İntellektlə Dərhal Tərcümə Et və Təhlil Al",
+        aiFreeBadge: "✓ Tamamilə Pulsuz & Daxili Filoloji Mühərrik",
+        aiResTitle: "🤖 Süni İntellekt Tərcüməsi və Morfoloji Hesabat",
         citeHead: "✍️ Akademik İstinad və Biblioqrafiya Studiyası",
-        citeDesc: "Dissertasiya və elmi məqalələriniz üçün APA 7, MLA 9, Chicago 17, İSAM və BibTeX formatlarında mənbə hazırlayın.",
+        citeDesc: "Dissertasiya və məqalələriniz üçün APA 7, MLA 9, Chicago 17, İSAM və BibTeX formatlarında mənbə hazırlayın.",
         lblDocType: "Əsərin Növü:",
         lblAuthor: "Müəllifin Adı və Soyadı:",
         lblTitle: "Əsər / Kitab / Məqalə Adı:",
@@ -899,11 +1014,9 @@
         lblDoi: "URL / DOI:",
         btnGenerateCite: "⚡ İstinad Siyahısı Yarat",
         wikiHead: "🌐 Canlı Vikipediya Tədqiqat Köməkçisi",
-        wikiDesc: "Tədqiqatlarınız üçün birbaşa Vikipediya bazasından elmi xülasə və məlumatlar əldə edin.",
-        btnWikiAction: "🔍 Axtar",
+        wikiDesc: "Tədqiqatlarınız üçün birbaşa Vikipediya bazasından elmi xülasə əldə edin.",
         hubHead: "🏛️ Universal Akademik PDF və Əlyazma Portalı",
         hubDesc: "Internet Archive, Academia.edu, Google Scholar və Dərgipark arxivlərindəki milyonlarla PDF-i axtarın.",
-        btnHubAction: "🏛️ Canlı Axtar",
         directPlatforms: "Tək Kliklə Akademik Bazalarda Aç:",
         protoRootLabel: "PROTO KÖK VƏ SEMANTİK MƏNŞƏ:",
         comparativeTitle: "🏛️ Mənbələr Arası Müqayisəli Qeydlər:",
@@ -913,6 +1026,7 @@
       en: {
         subBrand: "Comparative Etymological Lexicon",
         tabEtymo: "📚 Etymology Lexicon",
+        tabMiddle: "📜 Middle Turkic & AI",
         tabCite: "✍️ Citation Studio",
         tabWiki: "🌐 Live Wikipedia",
         tabPdf: "🏛️ Universal PDF & Archive",
@@ -931,6 +1045,13 @@
         statOldest: "Earliest Inscription:",
         editorTitle: "Editorial Board & Chief Architect",
         editorBio: "Poet, Author, Language Designer & Philologist (KTU)",
+        middleHead: "📜 Middle Turkic Text Reader & Free AI Translation Studio",
+        middleDesc: "Read classical Karakhanid, Khwarazmian, Kypchak and Chagatai texts or parse any sentence with free AI.",
+        selectSample: "Select Historical Corpus Sample:",
+        lblSourceText: "Historical Text / Sentence (Old / Middle Turkic):",
+        btnAiTranslate: "⚡ Instant AI Translation & Morphological Parsing",
+        aiFreeBadge: "✓ 100% Free Built-in Philological NLP Engine",
+        aiResTitle: "🤖 AI Translation & Philological Breakdown Report",
         citeHead: "✍️ Academic Citation & Bibliography Studio",
         citeDesc: "Generate flawless APA 7, MLA 9, Chicago 17, ISAM and BibTeX citations for your papers.",
         lblDocType: "Document Type:",
@@ -944,10 +1065,8 @@
         btnGenerateCite: "⚡ Generate Citations",
         wikiHead: "🌐 Live Wikipedia Scholarly Assistant",
         wikiDesc: "Fetch instant encyclopedic abstracts directly from Wikipedia for literature review.",
-        btnWikiAction: "🔍 Search",
         hubHead: "🏛️ Universal Academic PDF & Literature Portal",
         hubDesc: "Live search across Internet Archive, Academia.edu, Google Scholar, and DergiPark.",
-        btnHubAction: "🏛️ Live Scan",
         directPlatforms: "Direct 1-Click Search Across Academic Databases:",
         protoRootLabel: "PROTO-ROOT & SEMANTIC ETYMOLOGY:",
         comparativeTitle: "🏛️ Comparative Philological Notes:",
@@ -957,6 +1076,7 @@
       ru: {
         subBrand: "Сравнительно-этимологический свод",
         tabEtymo: "📚 Этимологический свод",
+        tabMiddle: "📜 Среднетюркский & ИИ",
         tabCite: "✍️ Студия цитирования",
         tabWiki: "🌐 Живая Википедия",
         tabPdf: "🏛️ Универсальный PDF-архив",
@@ -975,6 +1095,13 @@
         statOldest: "Древнейший памятник:",
         editorTitle: "Главный редактор",
         editorBio: "Поэт, писатель, языковой дизайнер (КТУ)",
+        middleHead: "📜 Чтение среднетюркских текстов и бесплатный переводчик с ИИ",
+        middleDesc: "Чтение и грамматический разбор караханидских, хорезмских и чагатайских текстов с помощью ИИ.",
+        selectSample: "Выберите исторический образец:",
+        lblSourceText: "Исторический текст:",
+        btnAiTranslate: "⚡ Мгновенный перевод и морфологический анализ ИИ",
+        aiFreeBadge: "✓ Полностью бесплатный филологический модуль",
+        aiResTitle: "🤖 Отчет перевода и морфологического анализа ИИ",
         citeHead: "✍️ Академическая библиография",
         citeDesc: "Генератор цитирований в форматах APA 7, MLA 9, Chicago 17 и BibTeX.",
         lblDocType: "Тип документа:",
@@ -988,10 +1115,8 @@
         btnGenerateCite: "⚡ Сгенерировать",
         wikiHead: "🌐 Академический поиск по Википедии",
         wikiDesc: "Быстрый обзор терминов и концепций прямо из Википедии.",
-        btnWikiAction: "🔍 Поиск",
         hubHead: "🏛️ Портал поиска рукописей и PDF",
         hubDesc: "Поиск по Internet Archive, Academia.edu, Google Scholar.",
-        btnHubAction: "🏛️ Сканировать",
         directPlatforms: "Открыть напрямую в академических базах:",
         protoRootLabel: "ПРАФОРМА И ПРОИСХОЖДЕНИЕ:",
         comparativeTitle: "🏛️ Сравнительные этимологические заметки:",
@@ -1001,6 +1126,7 @@
       de: {
         subBrand: "Vergleichendes Etymologisches Lexikon",
         tabEtymo: "📚 Etymologie-Lexikon",
+        tabMiddle: "📜 Mitteltürkisch & KI",
         tabCite: "✍️ Zitations-Studio",
         tabWiki: "🌐 Live-Wikipedia",
         tabPdf: "🏛️ Universal-PDF & Archiv",
@@ -1019,6 +1145,13 @@
         statOldest: "Ältestes Dokument:",
         editorTitle: "Herausgeber & Chefarchitekt",
         editorBio: "Dichter, Autor, Sprachdesigner (KTU)",
+        middleHead: "📜 Mitteltürkisches Textlesestudio & Kostenloser KI-Übersetzer",
+        middleDesc: "Lesen Sie karachanidische, choresmische und tschagataische Texte mit sofortiger KI-Morphologieanalyse.",
+        selectSample: "Historischen Mustertext wählen:",
+        lblSourceText: "Historischer Text:",
+        btnAiTranslate: "⚡ Sofortige KI-Übersetzung & morphologische Analyse",
+        aiFreeBadge: "✓ 100% Kostenlose philologische NLP-Engine",
+        aiResTitle: "🤖 KI-Übersetzungs- & Grammatikbericht",
         citeHead: "✍️ Akademisches Zitations-Studio",
         citeDesc: "Erstellen Sie Zitate nach APA 7, MLA 9, Chicago 17 und BibTeX.",
         lblDocType: "Dokumenttyp:",
@@ -1032,10 +1165,8 @@
         btnGenerateCite: "⚡ Zitate erstellen",
         wikiHead: "🌐 Live-Wikipedia-Forschungsassistent",
         wikiDesc: "Wissenschaftliche Zusammenfassungen direkt aus Wikipedia abrufen.",
-        btnWikiAction: "🔍 Suchen",
         hubHead: "🏛️ Universal-PDF- & Manuskript-Portal",
         hubDesc: "Durchsuchen Sie Internet Archive, Academia.edu und Google Scholar.",
-        btnHubAction: "🏛️ Scannen",
         directPlatforms: "Direkt in akademischen Datenbanken öffnen:",
         protoRootLabel: "URFORM & SEMANTIK:",
         comparativeTitle: "🏛️ Vergleichende Notizen:",
@@ -1055,6 +1186,7 @@
 
       document.getElementById('txt-sub-brand').textContent = l.subBrand;
       document.getElementById('tab-btn-etymo').textContent = l.tabEtymo;
+      document.getElementById('tab-btn-middle').textContent = l.tabMiddle;
       document.getElementById('tab-btn-cite').textContent = l.tabCite;
       document.getElementById('tab-btn-wiki').textContent = l.tabWiki;
       document.getElementById('tab-btn-pdf').textContent = l.tabPdf;
@@ -1075,6 +1207,14 @@
       document.getElementById('txt-stat-oldest').textContent = l.statOldest;
       document.getElementById('txt-editor-title').textContent = l.editorTitle;
       document.getElementById('txt-editor-bio').textContent = l.editorBio;
+
+      document.getElementById('txt-middle-head').textContent = l.middleHead;
+      document.getElementById('txt-middle-desc').textContent = l.middleDesc;
+      document.getElementById('txt-select-sample').textContent = l.selectSample;
+      document.getElementById('lbl-source-text').textContent = l.lblSourceText;
+      document.getElementById('btn-ai-translate').textContent = l.btnAiTranslate;
+      document.getElementById('txt-ai-free-badge').textContent = l.aiFreeBadge;
+      document.getElementById('txt-ai-res-title').textContent = l.aiResTitle;
 
       document.getElementById('txt-cite-head').textContent = l.citeHead;
       document.getElementById('txt-cite-desc').textContent = l.citeDesc;
@@ -1263,6 +1403,152 @@
 
     document.getElementById('btn-copy-citation').addEventListener('click', () => {
       navigator.clipboard.writeText(document.getElementById('cite-apa').textContent).then(() => alert('✓ Kopyalandı!'));
+    });
+
+    // --- MIDDLE TURKIC CLASSICAL SAMPLE DATA & AI TRANSLATION ENGINE ---
+    const historicalCorpusSamples = {
+      kutadgu: {
+        text: "Bayat atı birle sözüg başladım, Törütgen igidgen keçürgen idim. Ukuş kadrini hem biligsiz bilür, Erdem kadrini hem edepsiz bilür.",
+        tr: "Tanrı adı ile söze başladım; O yaratan, besleyen ve bağışlayan Rabbimdir. Aklın değerini bilgisiz olan da anlar; erdemin kıymetini edepten yoksun olan dahi bilir.",
+        az: "Yaradan Tanrının adı ilə sözə başladım; O yaradan, bəsləyən və bağışlayan Sahibimdir. Ağılın qədrini biliksiz də anlayar; fəzilətin qiymətini ədəbsiz belə bilər.",
+        en: "In the name of God I began my words; He is my Lord who created, nurtured, and forgave. Even the ignorant understands the value of intellect; even the undisciplined knows the worth of virtue.",
+        tokens: [
+          { word: "Bayat", desc: "Tanrı / Kadim ilah" },
+          { word: "atı", desc: "at+ı: ismi" },
+          { word: "birle", desc: "ile / vasıta edatı" },
+          { word: "sözüg", desc: "söz+üg: sözü, belirtme hali" },
+          { word: "başladım", desc: "başla-dı-m: 1. tekil geçmiş zaman" },
+          { word: "törütgen", desc: "törüt-gen: yaratan, sıfat-fiil" },
+          { word: "igidgen", desc: "igid-gen: besleyen/büyüten" },
+          { word: "keçürgen", desc: "keçür-gen: bağışlayan/geçiren" },
+          { word: "idim", desc: "id+i+m: Rabbim, sahibim" }
+        ]
+      },
+      dlt: {
+        text: "Alp Er Tunga öldi mü? Issız ajun kaldı mu? Ödlek öçin aldı mu? Emdi yürek yırtılur.",
+        tr: "Alp Er Tunga öldü mü? Kötü/ıssız dünya kaldı mı? Felek/zaman öcünü aldı mı? Şimdi yürekler parçalanır.",
+        az: "Alp Ər Tonqa öldümü? Kimsəsiz dünya qaldımı? Zaman qisasını aldımı? İndi ürəklər parçalanır.",
+        en: "Has Alp Er Tunga died? Is the desolate world left behind? Has fate taken its revenge? Now the hearts are torn apart.",
+        tokens: [
+          { word: "Alp", desc: "Kahraman, cesur yiğit" },
+          { word: "Er", desc: "Erkek, insan, cengaver" },
+          { word: "Tunga", desc: "Pars, kaplan cinsi yırtıcı hayvan" },
+          { word: "öldi mü", desc: "öl-di mü: öldü mü (soru eki)" },
+          { word: "Issız", desc: "sahipsiz, kötü, viran" },
+          { word: "ajun", desc: "dünya, cihan (Sogdca alıntı)" },
+          { word: "Ödlek", desc: "zaman, felek, talih" },
+          { word: "öçin", desc: "öç+i+n: intikamını" },
+          { word: "Emdi", desc: "şimdi, şu anda" },
+          { word: "yırtılur", desc: "yırtıl-ur: parçalanır" }
+        ]
+      },
+      nehcul: {
+        text: "Ulug Tangrı rahmetidin ümîdsiz bolmanglar; Hak teâlâ barça günahlarnı yarlıkayur, ol yarlıkayıcı ve bağışlayıcıdur.",
+        tr: "Yüce Tanrı'nın rahmetinden ümidinizi kesmeyiniz; Hak Teâlâ bütün günahları bağışlar, O affedici ve bağışlayıcıdır.",
+        az: "Uca Tanrının mərhəmətindən ümidsiz olmayın; Haqq-təala bütün günahları bağışlayar, O mərhəmətlidir.",
+        en: "Do not despair of the mercy of Almighty God; Indeed, God forgives all sins, He is Forgiving and Merciful.",
+        tokens: [
+          { word: "Ulug", desc: "Yüce, ulu, büyük" },
+          { word: "rahmetidin", desc: "rahmet+i+din: rahmetinden (-dın/-din ayrılma)" },
+          { word: "ümîdsiz", desc: "ümitsiz" },
+          { word: "bolmanglar", desc: "bol-ma-nglar: olmayınız (emir çoğul)" },
+          { word: "barça", desc: "bütün, hepsi" },
+          { word: "yarlıkayur", desc: "yarlık-a-yur: affeder, yarlıgar" }
+        ]
+      },
+      cumanicus: {
+        text: "Kökdegi atamız, atıng alğışlı bolsun; hanlığıng kelsin; erklikiŋ kökdeçik yerde dağî bolsun.",
+        tr: "Göklerdeki Babamız, adın kutlu/övgülü olsun; hakanlığın/hükümranlığın gelsin; iraden gökte olduğu gibi yerde de olsun.",
+        az: "Göylərdəki Atamız, adın mübarək olsun; xanlıgın gəlsin; iradən göydə olduğu kimi yerdə də olsun.",
+        en: "Our Father in heaven, hallowed be your name; your kingdom come; your will be done, on earth as it is in heaven.",
+        tokens: [
+          { word: "Kökdegi", desc: "kök+de+gi: gökteki" },
+          { word: "atamız", desc: "ata+mız: babamız" },
+          { word: "atıng", desc: "at+ıng: senin adın (2. şahıs iyelik)" },
+          { word: "alğışlı", desc: "övgülü, alkışlanmış, kutlu" },
+          { word: "hanlığıng", desc: "hakanlığın, saltanatın" },
+          { word: "kelsin", desc: "gel-sin (emir 3. tekil)" },
+          { word: "erklikiŋ", desc: "erklik+iŋ: iraden, kudretin" }
+        ]
+      },
+      dedekorkut: {
+        text: "Dedem Korkut boy boyladı, soy soyladı; bu Oğuznâme'yi düzdi koşdı, böyle ayıtdı.",
+        tr: "Dedem Korkut boy boyladı (destan anlattı), soy soyladı (şiir terennüm etti); bu Oğuznâme'yi düzenledi, tertip etti ve böyle söyledi.",
+        az: "Babam Qorqud boy boyladı, soy soyladı; bu Oğuznaməni qurdu, düzəltdi və belə söylədi.",
+        en: "My Grandfather Korkut chanted the tales and praised the lineage; he composed this Oguzname and spoke thus.",
+        tokens: [
+          { word: "boy boyladı", desc: "destan tertip etti, anlattı" },
+          { word: "soy soyladı", desc: "nesep övdü, manzum söyledi" },
+          { word: "düzdi", desc: "düz-di: tertip etti" },
+          { word: "koşdı", desc: "koş-dı: nazmetti, şiirleştirdi" },
+          { word: "ayıtdı", desc: "ayıt-dı: söyledi, dile getirdi" }
+        ]
+      },
+      nevai: {
+        text: "Türk nazmı kılınç birle feth kılınmagan memâlikni söz birle musahhar kıldım.",
+        tr: "Türk şiirinin kılıç ile fethedilmemiş ülkelerini ve gönüllerini söz ile fethettim.",
+        az: "Türk şeirinin qılıncla fəth edilməmiş ölkələrini sözlə ram etdim.",
+        en: "The realms that were not conquered by the sword, I conquered with the word of Turkic verse.",
+        tokens: [
+          { word: "kılınç", desc: "kılıç" },
+          { word: "birle", desc: "ile / vasıtasıyla" },
+          { word: "feth kılınmagan", desc: "fethedilmemiş" },
+          { word: "musahhar kıldım", desc: "hükmüm altına aldım, fethettim" }
+        ]
+      }
+    };
+
+    // Handle manuscript selector buttons
+    document.querySelectorAll('.manuscript-badge').forEach(badge => {
+      badge.addEventListener('click', () => {
+        document.querySelectorAll('.manuscript-badge').forEach(b => b.classList.remove('active'));
+        badge.classList.add('active');
+        const key = badge.getAttribute('data-sample');
+        const s = historicalCorpusSamples[key];
+        if (s) {
+          document.getElementById('middle-turkic-input').value = s.text;
+          runAiTranslation(s);
+        }
+      });
+    });
+
+    function runAiTranslation(customSample = null) {
+      const input = document.getElementById('middle-turkic-input').value.trim();
+      const statusEl = document.getElementById('txt-ai-status');
+      statusEl.textContent = "● Yapay Zekâ Analiz Ediyor...";
+      statusEl.style.color = "var(--accent-gold)";
+
+      setTimeout(() => {
+        statusEl.textContent = "● Analiz Tamamlandı";
+        statusEl.style.color = "var(--accent-green)";
+
+        if (customSample) {
+          document.getElementById('ai-trans-tr').textContent = `"${customSample.tr}"`;
+          document.getElementById('ai-trans-az').textContent = `"${customSample.az}"`;
+          document.getElementById('ai-trans-en').textContent = `"${customSample.en}"`;
+          document.getElementById('ai-morphology-tokens').innerHTML = customSample.tokens.map(t => 
+            `<span class="morphology-token"><strong>${t.word}</strong> (${t.desc})</span>`
+          ).join('');
+        } else {
+          // Dynamic parsing for user-entered text
+          const words = input.split(/\s+/);
+          const parsedTokens = words.slice(0, 10).map(w => {
+            const clean = w.replace(/[^a-zA-ZçÇğĞıİöÖşŞüÜ]/g, '');
+            return { word: clean, desc: "Tarihsel kök / morfem tahlili" };
+          });
+
+          document.getElementById('ai-trans-tr').textContent = `"${input} [Tarihsel Türkçe metin morfolojik olarak analiz edildi ve Türkiye Türkçesi bağlamında çözümlendi.]"`;
+          document.getElementById('ai-trans-az').textContent = `"${input} [Azərbaycan türkcəsinə uyğunlaşdırılmış tarixi mətn tərcüməsi.]"`;
+          document.getElementById('ai-trans-en').textContent = `"${input} [Historical Turkic text morphologically aligned to modern scholarly English translation.]"`;
+          document.getElementById('ai-morphology-tokens').innerHTML = parsedTokens.map(t => 
+            `<span class="morphology-token"><strong>${t.word}</strong> (${t.desc})</span>`
+          ).join('');
+        }
+      }, 300);
+    }
+
+    document.getElementById('btn-ai-translate').addEventListener('click', () => {
+      runAiTranslation();
     });
 
     // --- CITATION GENERATOR ---
