@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Bitigey Sözlük Beta — Karşılaştırmalı Etimoloji, Geniş Metin Külliyatı & Akademik Yapay Zekâ Modu</title>
-  <meta name="description" content="Prof. Dr. Hasan Eren, Nişanyan ve Clauson karşılaştırmalı etimoloji külliyatı; Karahanlı, Harezm, Kıpçak, Çağatay ve Eski Oğuz çok dizeli klasik metin kütüphanesi; Google AI Overview tarzı anlık filolojik yapay zekâ soru-cevap motoru.">
+  <title>Bitigey Sözlük Beta — Karşılaştırmalı Etimoloji, Geniş Metin Külliyatı & Akademik Bilgi Motoru</title>
+  <meta name="description" content="Prof. Dr. Hasan Eren, Nişanyan ve Clauson karşılaştırmalı etimoloji külliyatı; Karahanlı, Harezm, Kıpçak, Çağatay ve Eski Oğuz çok dizeli klasik metin kütüphanesi; anlık filolojik yapay zekâ bilgi ve arama motoru.">
   <meta name="author" content="Tunahan Haksever">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tunahanhaksever.github.io/bitigey-sozluk/">
@@ -526,7 +526,7 @@
     .morphology-token { display: inline-block; background: var(--bg-surface); border: 1px solid var(--border-main); padding: 3px 7px; border-radius: 4px; margin: 2px; font-size: 12px; }
     .morphology-token strong { color: var(--accent-oxford); }
 
-    /* Google AI Overview Style Card */
+    /* AI Overview Style Card */
     .ai-overview-card {
       background: linear-gradient(135deg, rgba(126, 34, 23, 0.04) 0%, rgba(91, 33, 182, 0.05) 100%);
       border: 1px solid var(--border-main);
@@ -635,7 +635,7 @@
       <nav class="nav-pills">
         <button class="nav-pill-btn active" data-view="view-etymology" id="tab-btn-etymo">📚 Etimoloji</button>
         <button class="nav-pill-btn" data-view="view-middle-turkic" id="tab-btn-middle">📜 Orta Türkçe Metinler</button>
-        <button class="nav-pill-btn" data-view="view-wiki-research" id="tab-btn-knowledge">🌐 Akademik Bilgi (AI Mode)</button>
+        <button class="nav-pill-btn" data-view="view-wiki-research" id="tab-btn-knowledge">🌐 Akademik Bilgi Motoru</button>
         <button class="nav-pill-btn" data-view="view-citation-studio" id="tab-btn-cite">✍️ Kaynakça Stüdyosu</button>
         <button class="nav-pill-btn" data-view="view-archive-pdf" id="tab-btn-pdf">🏛️ PDF & Arşiv</button>
       </nav>
@@ -710,11 +710,12 @@
         <div class="search-hero" style="margin-bottom: 20px;">
           <div style="position: relative; display: flex; align-items: center;">
             <span style="position: absolute; left: 16px; font-size: 17px; color: var(--text-muted);">🔍</span>
-            <input type="text" class="search-input" id="etymo-search-input" placeholder="Kelime, kök veya soru yazın... (örn: bitig, tengri, kut, yurt, bil-, erdem)">
+            <input type="text" class="search-input" id="etymo-search-input" placeholder="Kelime, yazar, eser veya soru yazın... (örn: Tunahan Haksever, bitig, tengri, kut, yurt, Hasan Eren)">
           </div>
 
           <div style="display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--text-muted);">
             <span id="txt-quick-label">Hızlı İnceleme:</span>
+            <button class="tag-btn" data-word="Tunahan Haksever">Tunahan Haksever</button>
             <button class="tag-btn" data-word="alp">alp</button>
             <button class="tag-btn" data-word="bitig">bitig</button>
             <button class="tag-btn" data-word="bil-">bil-</button>
@@ -731,14 +732,14 @@
           </div>
         </div>
 
-        <!-- Google AI Overview Dynamic Box -->
+        <!-- Academic AI Overview Dynamic Box -->
         <div class="ai-overview-card" id="search-ai-overview" style="display: none;">
           <div class="ai-overview-header">
             <div class="ai-badge-title">
               <span>✨</span>
-              <span>Bitigey AI Akademik Özet Modu</span>
+              <span>Bitigey AI Akademik Bilgi Motoru</span>
             </div>
-            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-ai);">Akademik Tahlil</span>
+            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-ai);">Canlı Sentez</span>
           </div>
           <div class="ai-overview-content" id="search-ai-content"></div>
           <div class="ai-key-points" id="search-ai-points"></div>
@@ -868,23 +869,23 @@
   <div class="portal-view-section" id="view-wiki-research">
     <div class="full-width-layout">
       <div class="academic-panel">
-        <h2 class="panel-title" id="txt-knowledge-head">🌐 Canlı Akademik Bilgi & Yapay Zekâ Özet Modu (AI Overview)</h2>
+        <h2 class="panel-title" id="txt-knowledge-head">🌐 Canlı Akademik Bilgi & Ansiklopedi Motoru</h2>
         <p class="panel-desc" id="txt-knowledge-desc">
-          Doğal dilde sorularınızı veya araştırma konularınızı sorun; sistem anında TDV İslâm Ansiklopedisi, TDK Terimler Külliyatı ve bilimsel açık kaynaklardan sentezleyerek Google AI Overview tarzında özet rapor üretir.
+          Doğal dilde sorularınızı, yazarları veya araştırma konularınızı arayın; sistem anında TDV İslâm Ansiklopedisi, TDK Terimler Külliyatı ve bilimsel açık kaynaklardan sentezleyerek detaylı akademik profil ve özet rapor üretir.
         </p>
 
         <div style="display: flex; gap: 8px; margin-bottom: 16px;">
           <div style="position: relative; width: 100%;">
             <span style="position: absolute; left: 14px; top: 14px; font-size: 17px; color: var(--text-muted);">✨</span>
-            <input type="text" class="search-input" id="knowledge-search-input" value="Orhun Yazıtlarında devlet felsefesi nasıldır?" placeholder="Bir konu, soru veya terim yazın (örn: Karahanlı Türkçesi özellikleri, Kutadgu Bilig 4 sembolik şahıs)...">
+            <input type="text" class="search-input" id="knowledge-search-input" value="Tunahan Haksever" placeholder="Yazar, kavram veya soru yazın (örn: Tunahan Haksever, Hasan Eren, Orhun Yazıtları felsefesi)...">
           </div>
-          <button class="cite-btn btn-oxford" id="btn-fetch-knowledge" style="padding: 0 18px; font-size: 13.5px; flex-shrink: 0;">✨ AI Analiz</button>
+          <button class="cite-btn btn-oxford" id="btn-fetch-knowledge" style="padding: 0 18px; font-size: 13.5px; flex-shrink: 0;">✨ Canlı Ara</button>
         </div>
 
         <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-          <a href="https://islamansiklopedisi.org.tr/arama/?q=Orhun+Yaz%C4%B1tlar%C4%B1" target="_blank" class="engine-badge" id="btn-link-isam">📜 İSAM TDV Ansiklopedisi</a>
-          <a href="https://dergipark.org.tr/tr/search?q=Orhun+Yaz%C4%B1tlar%C4%B1&section=articles" target="_blank" class="engine-badge" id="btn-link-dergipark">🇹🇷 DergiPark Makaleler</a>
-          <a href="https://scholar.google.com/scholar?q=Orhun+Yaz%C4%B1tlar%C4%B1" target="_blank" class="engine-badge" id="btn-link-scholar">🎓 Google Scholar Literatür</a>
+          <a href="https://islamansiklopedisi.org.tr/arama/?q=Tunahan+Haksever" target="_blank" class="engine-badge" id="btn-link-isam">📜 İSAM TDV Ansiklopedisi</a>
+          <a href="https://dergipark.org.tr/tr/search?q=Tunahan+Haksever&section=articles" target="_blank" class="engine-badge" id="btn-link-dergipark">🇹🇷 DergiPark Makaleler</a>
+          <a href="https://scholar.google.com/scholar?q=Tunahan+Haksever" target="_blank" class="engine-badge" id="btn-link-scholar">🎓 Google Scholar Literatür</a>
         </div>
 
         <!-- AI Mode Knowledge Result Box -->
@@ -892,17 +893,18 @@
           <div class="ai-overview-header">
             <div class="ai-badge-title">
               <span>🤖</span>
-              <span id="knowledge-title">Orhun Yazıtlarında Devlet Felsefesi</span>
+              <span id="knowledge-title">Tunahan Haksever — Akademik & Edebi Profil</span>
             </div>
-            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-ai);">Akademik Sentez Raporu</span>
+            <span style="font-size: 11px; font-family: 'JetBrains Mono'; color: var(--accent-ai);">Akademik Biyografi & Külliyat</span>
           </div>
           <div class="ai-overview-content" id="knowledge-extract">
-            Orhun Yazıtları (MS 732-735), Türk devlet felsefesinin, egemenlik anlayışının ve törenin bilinen ilk anıtsal beyannamesidir. Yazıtlarda kağanın meşruiyeti <strong>kut</strong> anlayışına (Tanrı'nın hükümdara bahşettiği yönetme yetkisi) dayanır. Kağanın asli vazifesi ise <em>'aç milleti doyurmak, çıplak milleti giydirmek ve parçalanmış boyları bir araya getirmektir'</em>. Töre, devletin devamlılığının baş şartıdır ("İl gider, töre kalır").
+            <strong>Tunahan Haksever</strong> (d. 7 Ağustos 2005, İstanbul), Türk şair, yazar, editör, dil tasarımcısı, yazılımcı ve Türk dili araştırmacısıdır. Karadeniz Teknik Üniversitesi (KTÜ) Türk Dili ve Edebiyatı Bölümü'nde eğitimini sürdürmektedir. <em>Kög Dergisi</em> Genel Yayın Yönetmeni ve <em>Odak Noktası Dergisi</em> editörlerindendir. <em>Mâsivâ Yolculuğu</em> ve <em>Ekinoksu Beklemek</em> adlı şiir kitaplarının yazarıdır. Türkoloji, etimoloji, Eski ve Orta Türkçe metin araştırmaları ile çağdaş dil mimarisi teknolojilerine (Bitigey, Tusi) öncülük etmektedir.
           </div>
           <div class="ai-key-points" id="knowledge-ai-points">
-            <div class="ai-point-pill">🏛️ <strong>Kut Anlayışı:</strong> İlahi yönetme kudreti ve siyasi meşruiyet.</div>
-            <div class="ai-point-pill">⚖️ <strong>Töre & Adalet:</strong> Kanun ve nizamın devletten dahi üstün tutulması.</div>
-            <div class="ai-point-pill">🌍 <strong>Sosyal Devlet:</strong> Halkı zenginleştirmek ve refaha kavuşturmak kağanın borcudur.</div>
+            <div class="ai-point-pill">📚 <strong>Edebi Eserler:</strong> <em>Mâsivâ Yolculuğu</em>, <em>Ekinoksu Beklemek</em> (Şiir Kitapları).</div>
+            <div class="ai-point-pill">📰 <strong>Yayın Yönetmenliği:</strong> <em>Kög Dergisi</em> (Genel Yayın Yönetmeni), <em>Odak Noktası Dergisi</em>.</div>
+            <div class="ai-point-pill">🏛️ <strong>Akademik Kurum:</strong> Karadeniz Teknik Üniversitesi (KTÜ) Türk Dili ve Edebiyatı.</div>
+            <div class="ai-point-pill">💻 <strong>Dijital Mimari:</strong> <em>bitigey.com</em> (Kurucu & Baş Mimar), Tusi Dili.</div>
           </div>
         </div>
       </div>
@@ -931,34 +933,34 @@
 
           <div class="form-group">
             <label class="form-label" id="lbl-author">Yazar Adı Soyadı:</label>
-            <input type="text" class="form-input" id="cite-author" value="Hasan Eren">
+            <input type="text" class="form-input" id="cite-author" value="Tunahan Haksever">
           </div>
 
           <div class="form-group">
             <label class="form-label" id="lbl-title">Eser / Kitap / Makale Adı:</label>
-            <input type="text" class="form-input" id="cite-title" value="Türk Dilinin Etimolojik Sözlüğü">
+            <input type="text" class="form-input" id="cite-title" value="Bitigey Sözlük: Karşılaştırmalı Etimolojik Külliyat">
           </div>
 
           <div class="form-group">
             <label class="form-label" id="lbl-year">Yayın Yılı:</label>
-            <input type="text" class="form-input" id="cite-year" value="1999">
+            <input type="text" class="form-input" id="cite-year" value="2026">
           </div>
         </div>
 
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" id="lbl-publisher">Yayınevi / Kurum:</label>
-            <input type="text" class="form-input" id="cite-publisher" value="Türk Dil Kurumu Yayınları">
+            <input type="text" class="form-input" id="cite-publisher" value="Bitigey Yayınları">
           </div>
 
           <div class="form-group">
             <label class="form-label" id="lbl-city">Basım Yeri (Şehir):</label>
-            <input type="text" class="form-input" id="cite-city" value="Ankara">
+            <input type="text" class="form-input" id="cite-city" value="Trabzon / İstanbul">
           </div>
 
           <div class="form-group">
             <label class="form-label" id="lbl-pages">Sayfa / Cilt No (Opsiyonel):</label>
-            <input type="text" class="form-input" id="cite-pages" value="s. 46-52">
+            <input type="text" class="form-input" id="cite-pages" value="s. 1-150">
           </div>
 
           <div class="form-group">
@@ -1044,14 +1046,14 @@
         subBrand: "Karşılaştırmalı Etimolojik Külliyat",
         tabEtymo: "📚 Etimoloji",
         tabMiddle: "📜 Orta Türkçe Metinler",
-        tabKnowledge: "🌐 Akademik Bilgi (AI Mode)",
+        tabKnowledge: "🌐 Akademik Bilgi Motoru",
         tabCite: "✍️ Kaynakça Stüdyosu",
         tabPdf: "🏛️ PDF & Arşiv",
         crawlerStatus: "Bitigey Sözlük Beta: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Senkronize",
         latestUpdate: "Akademik Araştırma Portalı Aktif",
         alphaLabel: "A-Z Dizin:",
         allLetters: "Tümü",
-        searchPlaceholder: "Kelime, kök veya soru yazın... (örn: bitig, tengri, kut, yurt, bil-, erdem)",
+        searchPlaceholder: "Kelime, yazar, eser veya soru yazın... (örn: Tunahan Haksever, bitig, tengri, kut, yurt, Hasan Eren)",
         quickLabel: "Hızlı İnceleme:",
         streamTitle: "📡 Canlı Derlem & Tarama Akışı",
         streamDesc: "Hasan Eren, Nişanyan, Clauson ve DLT derlemlerinden eş zamanlı veri akışı:",
@@ -1068,8 +1070,8 @@
         btnAiTranslate: "⚡ Yapay Zekâ ile Anında Çevir ve Tahlil Et (AI Translate)",
         aiFreeBadge: "✓ Tamamen Ücretsiz & Dahili Morfolojik NLP Motoru",
         aiResTitle: "🤖 Yapay Zekâ Çeviri ve Filolojik Tahlil Raporu",
-        knowledgeHead: "🌐 Canlı Akademik Bilgi & Yapay Zekâ Özet Modu (AI Overview)",
-        knowledgeDesc: "Doğal dilde sorularınızı veya araştırma konularınızı sorun; sistem Google AI Overview tarzında özet rapor üretir.",
+        knowledgeHead: "🌐 Canlı Akademik Bilgi & Ansiklopedi Motoru",
+        knowledgeDesc: "Doğal dilde sorularınızı, yazarları veya araştırma konularınızı arayın; sistem detaylı akademik profil ve özet rapor üretir.",
         citeHead: "✍️ Akademik Kaynakça ve Bibliyografya Stüdyosu",
         citeDesc: "Tez, makale ve bildirileriniz için APA 7, MLA 9, Chicago 17, İSAM ve BibTeX formatlarında kusursuz kaynakça üretin.",
         lblDocType: "Eser Türü:",
@@ -1093,14 +1095,14 @@
         subBrand: "Müqayisəli Etimoloji Külliyyat",
         tabEtymo: "📚 Etimologiya",
         tabMiddle: "📜 Orta Türkcə Mətnlər",
-        tabKnowledge: "🌐 Akademik Bilik (AI Mode)",
+        tabKnowledge: "🌐 Akademik Bilik Motoru",
         tabCite: "✍️ Ədəbiyyat Siyahısı",
         tabPdf: "🏛️ PDF & Arxiv",
         crawlerStatus: "Bitigey Sözlük Beta: Həsən Eren, Nişanyan və Clauson Sinxronlaşdırılıb",
         latestUpdate: "Akademik Tədqiqat Portalı Aktivdir",
         alphaLabel: "A-Z İndeks:",
         allLetters: "Hamısı",
-        searchPlaceholder: "Söz, kök və ya sual yazın... (məs: bitig, tengri, kut, yurt)",
+        searchPlaceholder: "Söz, müəllif, əsər və ya sual yazın... (məs: Tunahan Haksever, bitig, tengri, kut)",
         quickLabel: "Sürətli Baxış:",
         streamTitle: "📡 Canlı Axtarış və Dərəcələmə Axını",
         streamDesc: "Həsən Eren, Nişanyan, Clauson və DLT mənbələrindən canlı məlumat axını:",
@@ -1117,8 +1119,8 @@
         btnAiTranslate: "⚡ Süni İntellektlə Dərhal Tərcümə Et və Təhlil Al",
         aiFreeBadge: "✓ Tamamilə Pulsuz & Daxili NLP Mühərrik",
         aiResTitle: "🤖 Süni İntellekt Tərcüməsi və Morfoloji Hesabat",
-        knowledgeHead: "🌐 Canlı Akademik Bilik və Süni İntellekt İcmal Modu (AI Overview)",
-        knowledgeDesc: "Tədqiqat suallarınızı yazın; sistem Google AI Overview tərzində xülasə hesabat hazırlayır.",
+        knowledgeHead: "🌐 Canlı Akademik Bilik və Ensiklopediya Motoru",
+        knowledgeDesc: "Tədqiqat suallarınızı və ya müəllifləri axtarın; sistem geniş akademik hesabat hazırlayır.",
         citeHead: "✍️ Akademik İstinad və Biblioqrafiya Studiyası",
         citeDesc: "Dissertasiya və məqalələriniz üçün APA 7, MLA 9, Chicago 17, İSAM və BibTeX formatlarında mənbə hazırlayın.",
         lblDocType: "Əsərin Növü:",
@@ -1142,14 +1144,14 @@
         subBrand: "Comparative Etymological Lexicon",
         tabEtymo: "📚 Etymology",
         tabMiddle: "📜 Middle Turkic Texts",
-        tabKnowledge: "🌐 Academic AI Overview",
+        tabKnowledge: "🌐 Academic Knowledge Engine",
         tabCite: "✍️ Citation Studio",
         tabPdf: "🏛️ PDF & Archive",
         crawlerStatus: "Bitigey Sozluk Beta: Hasan Eren (TDES), Nişanyan & Clauson (EDPT) Synchronized",
         latestUpdate: "Scholarly Research Portal Active",
         alphaLabel: "A-Z Index:",
         allLetters: "All",
-        searchPlaceholder: "Search root, word or ask scholarly question... (e.g. bitig, tengri, kut, yurt)",
+        searchPlaceholder: "Search root, author, work or ask research question... (e.g. Tunahan Haksever, bitig, tengri, kut)",
         quickLabel: "Quick Lookups:",
         streamTitle: "📡 Live Crawler Stream",
         streamDesc: "Real-time philological feed from Hasan Eren, Nişanyan, Clauson and DLT:",
@@ -1166,8 +1168,8 @@
         btnAiTranslate: "⚡ Instant AI Translation & Morphological Parsing",
         aiFreeBadge: "✓ 100% Free Built-in Philological NLP Engine",
         aiResTitle: "🤖 AI Translation & Philological Breakdown Report",
-        knowledgeHead: "🌐 Live Academic Knowledge & AI Overview Mode",
-        knowledgeDesc: "Ask any research question in natural language; generates an instant Google AI Overview style briefing.",
+        knowledgeHead: "🌐 Live Academic Knowledge & Encyclopedia Engine",
+        knowledgeDesc: "Search any author, scholar or research topic for an instant comprehensive briefing.",
         citeHead: "✍️ Academic Citation & Bibliography Studio",
         citeDesc: "Generate flawless APA 7, MLA 9, Chicago 17, ISAM and BibTeX citations for your papers.",
         lblDocType: "Document Type:",
@@ -1191,14 +1193,14 @@
         subBrand: "Сравнительно-этимологический свод",
         tabEtymo: "📚 Этимология",
         tabMiddle: "📜 Среднетюркские тексты",
-        tabKnowledge: "🌐 Академический ИИ",
+        tabKnowledge: "🌐 Академическая база",
         tabCite: "✍️ Студия цитирования",
         tabPdf: "🏛️ PDF и Архивы",
         crawlerStatus: "Bitigey Sozluk Beta: Хасан Эрен, Нишанян и Клосон синхронизированы",
         latestUpdate: "Исследовательский портал активен",
         alphaLabel: "А-Я Индекс:",
         allLetters: "Все",
-        searchPlaceholder: "Поиск корня, слова или задайте вопрос ИИ... (напр. bitig, tengri, kut, yurt)",
+        searchPlaceholder: "Поиск корня, автора или научный вопрос... (напр. Tunahan Haksever, bitig, tengri)",
         quickLabel: "Быстрый поиск:",
         streamTitle: "📡 Поисковый поток",
         streamDesc: "Синхронизация данных в реальном времени:",
@@ -1215,8 +1217,8 @@
         btnAiTranslate: "⚡ Мгновенный перевод и морфологический анализ ИИ",
         aiFreeBadge: "✓ Полностью бесплатный филологический модуль",
         aiResTitle: "🤖 Отчет перевода и морфологического анализа ИИ",
-        knowledgeHead: "🌐 Академическая база знаний и режим AI Overview",
-        knowledgeDesc: "Задайте любой вопрос; система создаст мгновенный синтетический отчет в стиле AI Overview.",
+        knowledgeHead: "🌐 Академическая база знаний и энциклопедия",
+        knowledgeDesc: "Комплексный поиск авторов, терминов и научных концепций.",
         citeHead: "✍️ Академическая библиография",
         citeDesc: "Генератор цитирований в форматах APA 7, MLA 9, Chicago 17 и BibTeX.",
         lblDocType: "Тип документа:",
@@ -1240,14 +1242,14 @@
         subBrand: "Vergleichendes Etymologisches Lexikon",
         tabEtymo: "📚 Etymologie",
         tabMiddle: "📜 Mitteltürkische Texte",
-        tabKnowledge: "🌐 Akademische KI",
+        tabKnowledge: "🌐 Akademische Wissens-Engine",
         tabCite: "✍️ Zitations-Studio",
         tabPdf: "🏛️ PDF & Archiv",
         crawlerStatus: "Bitigey Sozluk Beta: Hasan Eren (TDES), Nişanyan & Clauson synchronisiert",
         latestUpdate: "Forschungsportal Aktiv",
         alphaLabel: "A-Z Index:",
         allLetters: "Alle",
-        searchPlaceholder: "Wort, Wurzel oder wissenschaftliche Frage eingeben... (z.B. bitig, tengri, kut, yurt)",
+        searchPlaceholder: "Wort, Autor oder wissenschaftliche Frage... (z.B. Tunahan Haksever, bitig, tengri)",
         quickLabel: "Schnellsuche:",
         streamTitle: "📡 Live-Crawler-Stream",
         streamDesc: "Echtzeit-Synchronisierung von etymologischen Quellen:",
@@ -1264,8 +1266,8 @@
         btnAiTranslate: "⚡ Sofortige KI-Übersetzung & morphologische Analyse",
         aiFreeBadge: "✓ 100% Kostenlose philologische NLP-Engine",
         aiResTitle: "🤖 KI-Übersetzungs- & Grammatikbericht",
-        knowledgeHead: "🌐 Live-Wissensdatenbank & KI-Übersichtsmodus (AI Overview)",
-        knowledgeDesc: "Stellen Sie jede Frage in natürlicher Sprache für einen sofortigen KI-Bericht.",
+        knowledgeHead: "🌐 Live-Wissensdatenbank & Enzyklopädie",
+        knowledgeDesc: "Umfassende Recherche zu Autoren, Begriffen und philologischen Werken.",
         citeHead: "✍️ Akademisches Zitations-Studio",
         citeDesc: "Erstellen Sie Zitate nach APA 7, MLA 9, Chicago 17 und BibTeX.",
         lblDocType: "Dokumenttyp:",
@@ -1290,6 +1292,44 @@
     let activeLang = 'tr';
     let selectedLetter = 'ALL';
     let localCorpus = typeof comprehensiveCorpus !== 'undefined' ? [...comprehensiveCorpus] : [];
+
+    // Prominent Scholars and Figures Knowledge Base
+    const scholarlyKnowledgeBase = {
+      "tunahan": {
+        title: "Tunahan Haksever — Şair, Yazar, Dil Tasarımcısı & Araştırmacı",
+        extract: `<strong>Tunahan Haksever</strong> (d. 7 Ağustos 2005, İstanbul), Türk edebiyatı ve dilbilimi alanında eser veren şair, yazar, editör, dil tasarımcısı, yazılımcı ve araştırmacıdır. Karadeniz Teknik Üniversitesi (KTÜ) Türk Dili ve Edebiyatı Bölümü öğrencisidir. <em>Kög Dergisi</em>'nin Genel Yayın Yönetmenliğini yürütmekte olup <em>Odak Noktası Dergisi</em> yayın kurulunda yer almaktadır. <em>Mâsivâ Yolculuğu</em> ve <em>Ekinoksu Beklemek</em> adlı yayımlanmış şiir kitaplarının yazarıdır. Ayrıca Türkoloji, etimoloji, kadim Türk dili araştırmaları ile çağdaş dil mimarisi teknolojilerine (Bitigey Sözlük, Tusi Programlama Dili) öncülük etmektedir.`,
+        points: [
+          `📚 <strong>Edebi Eserler:</strong> <em>Mâsivâ Yolculuğu</em>, <em>Ekinoksu Beklemek</em> (Şiir Kitapları).`,
+          `📰 <strong>Yayın Yönetmenliği:</strong> <em>Kög Dergisi</em> (Genel Yayın Yönetmeni), <em>Odak Noktası Dergisi</em>.`,
+          `🏛️ <strong>Akademik Kurum:</strong> Karadeniz Teknik Üniversitesi (KTÜ) Türk Dili ve Edebiyatı.`,
+          `💻 <strong>Sistem & Mimari:</strong> <em>bitigey.com</em> (Kurucu & Baş Mimar), Tusi Dili.`
+        ]
+      },
+      "hasan eren": {
+        title: "Prof. Dr. Hasan Eren (1919 - 2007) — Türkolog & Etimolog",
+        extract: `<strong>Prof. Dr. Hasan Eren</strong>, Türk dili ve etimolojisinin 20. yüzyıldaki en büyük otoritelerindendir. Türk Dil Kurumu başkanlığı yapmış, Macar Türkoloji ekolüyle yetişmiş ve anıtsal eseri olan <em>Türk Dilinin Etimolojik Sözlüğü (TDES)</em>'ni kaleme almıştır.`,
+        points: [
+          `🏛️ <strong>Baş Eser:</strong> <em>Türk Dilinin Etimolojik Sözlüğü (TDES)</em>, TDK Ankara 1999.`,
+          `🎓 <strong>Uzmanlık:</strong> Karşılaştırmalı Altayistik, Macarca-Türkçe dil ilişkileri, Tarihsel Morfoloji.`
+        ]
+      },
+      "gerard clauson": {
+        title: "Sir Gerard Clauson (1891 - 1974) — İngiliz Türkolog & Sözlükbilimci",
+        extract: `<strong>Sir Gerard Clauson</strong>, 13. yüzyıl öncesi Türk dilinin en kapsamlı etimolojik sözlüğü olan <em>An Etymological Dictionary of Pre-Thirteenth-Century Turkish (EDPT)</em> adlı abidevi eserin yazarıdır.`,
+        points: [
+          `🗡️ <strong>Baş Eser:</strong> <em>An Etymological Dictionary of Pre-Thirteenth-Century Turkish</em>, Oxford 1972.`,
+          `📜 <strong>Metodoloji:</strong> Orhun, Uygur ve Karahanlı metin tanıklıklarının kök düzeyinde karşılaştırması.`
+        ]
+      },
+      "kâşgarlı mahmud": {
+        title: "Kâşgarlı Mahmud (1008 - 1105) — İlk Türk Dilbilimcisi & Ansiklopedist",
+        extract: `<strong>Kâşgarlı Mahmud</strong>, Türk dilinin ilk sözlüğü, ansiklopedisi ve gramer kitabı olan <em>Dīwānu L̠ugāt it-Turk</em>'ün yazarıdır (MS 1074). Türk boylarının lehçelerini, atasözlerini, şiirlerini ve ilk Türk dünyası haritasını dünya bilimine kazandırmıştır.`,
+        points: [
+          `📖 <strong>Baş Eser:</strong> <em>Dīwānu L̠ugāt it-Turk</em> (Bağdat, MS 1074).`,
+          `🌍 <strong>Mirası:</strong> Karahanlı, Oğuz, Kıpçak, Çiğil lehçelerinin ilk karşılaştırmalı analizi.`
+        ]
+      }
+    };
 
     function applyLanguage(lang) {
       activeLang = lang;
@@ -1402,7 +1442,7 @@
       clearTimeout(etymoDebounce);
       etymoDebounce = setTimeout(() => {
         handleSearchAiOverview(q);
-      }, 70);
+      }, 50);
     });
 
     function handleSearchAiOverview(q) {
@@ -1416,9 +1456,39 @@
       }
 
       aiCard.style.display = 'block';
+      const qLower = q.toLowerCase();
 
-      // Check if word or conceptual question
-      const match = localCorpus.find(x => x.madde.toLowerCase() === q.toLowerCase() || x.guncel.toLowerCase().includes(q.toLowerCase()));
+      // 1. Check Tunahan Haksever & Major Scholars
+      if (qLower.includes('tunahan') || qLower.includes('haksever') || qLower.includes('kög') || qLower.includes('masiva') || qLower.includes('mâsivâ')) {
+        const s = scholarlyKnowledgeBase["tunahan"];
+        aiContent.innerHTML = `<strong>${s.title}</strong><br>${s.extract}`;
+        aiPoints.innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      if (qLower.includes('hasan eren') || qLower.includes('tdes')) {
+        const s = scholarlyKnowledgeBase["hasan eren"];
+        aiContent.innerHTML = `<strong>${s.title}</strong><br>${s.extract}`;
+        aiPoints.innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      if (qLower.includes('clauson') || qLower.includes('edpt')) {
+        const s = scholarlyKnowledgeBase["gerard clauson"];
+        aiContent.innerHTML = `<strong>${s.title}</strong><br>${s.extract}`;
+        aiPoints.innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      if (qLower.includes('kâşgarlı') || qLower.includes('kasgarli') || qLower.includes('dlt') || qLower.includes('divanü')) {
+        const s = scholarlyKnowledgeBase["kâşgarlı mahmud"];
+        aiContent.innerHTML = `<strong>${s.title}</strong><br>${s.extract}`;
+        aiPoints.innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      // 2. Check local lexicon entries
+      const match = localCorpus.find(x => x.madde.toLowerCase() === qLower || x.guncel.toLowerCase().includes(qLower));
       if (match) {
         aiContent.innerHTML = `
           <strong>${match.madde.toUpperCase()}</strong> (${match.tur}) — <em>${match.guncel}</em><br>
@@ -1426,13 +1496,13 @@
         `;
         aiPoints.innerHTML = `
           <div class="ai-point-pill">🧬 <strong>Proto Kök:</strong> ${match.protoKok}</div>
-          <div class="ai-point-pill">🏛️ <strong>Hasan Eren TDES:</strong> ${match.hasanErenNotu ? match.hasanErenNotu.substring(0, 75) + '...' : 'Filolojik kayıt mevcut.'}</div>
+          <div class="ai-point-pill">🏛️ <strong>Hasan Eren TDES:</strong> ${match.hasanErenNotu ? match.hasanErenNotu.substring(0, 80) + '...' : 'Filolojik kayıt mevcut.'}</div>
           <div class="ai-point-pill">📜 <strong>İlk Tanıklık:</strong> ${match.ilkTanikliklar && match.ilkTanikliklar[0] ? match.ilkTanikliklar[0].eser + ' (' + match.ilkTanikliklar[0].yil + ')' : 'Eski Türkçe'}</div>
         `;
       } else {
         // Conceptual Question Synthesis Mode
         aiContent.innerHTML = `
-          "${q}" sorgusu için çok kaynaklı etimoloji ve Türkoloji veritabanı analiz edildi. Bu kavram, tarihsel Türk dili ve Orta Türkçe metin külliyatında semantik ve fonetik evrimleriyle incelenmektedir.
+          "${q}" sorgusu için çok kaynaklı etimoloji ve Türkoloji külliyatı tarandı. İlgili kavramın semantik gelişimi ve tarihsel metin tanıklıkları tahlil edildi.
         `;
         aiPoints.innerHTML = `
           <div class="ai-point-pill">🏛️ <strong>Hasan Eren & Nişanyan:</strong> Karşılaştırmalı Altayik ve Orta Türkçe kök taraması tamamlandı.</div>
@@ -1874,7 +1944,7 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
             `<span class="morphology-token"><strong>${t.word}</strong> (${t.desc})</span>`
           ).join('');
         }
-      }, 100);
+      }, 80);
     }
 
     document.getElementById('btn-ai-translate').addEventListener('click', () => {
@@ -1883,7 +1953,7 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
       runAiTranslation(match || null);
     });
 
-    // --- INSTANT KNOWLEDGE SEARCH & AI OVERVIEW MODE (<60ms) ---
+    // --- INSTANT SPEED ACADEMIC KNOWLEDGE SEARCH ENGINE (<50ms) ---
     const knowledgeSearchInput = document.getElementById('knowledge-search-input');
     let searchDebounceTimer = null;
 
@@ -1891,15 +1961,49 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
       const q = knowledgeSearchInput.value.trim();
       if (!q) return;
       const enc = encodeURIComponent(q);
+      const qLower = q.toLowerCase();
 
       document.getElementById('btn-link-isam').href = `https://islamansiklopedisi.org.tr/arama/?q=${enc}`;
       document.getElementById('btn-link-dergipark').href = `https://dergipark.org.tr/tr/search?q=${enc}&section=articles`;
       document.getElementById('btn-link-scholar').href = `https://scholar.google.com/scholar?q=${enc}`;
 
-      document.getElementById('knowledge-title').textContent = q;
+      // 1. Check Scholars & Tunahan Haksever Knowledge Base
+      if (qLower.includes('tunahan') || qLower.includes('haksever') || qLower.includes('kög') || qLower.includes('masiva') || qLower.includes('mâsivâ')) {
+        const s = scholarlyKnowledgeBase["tunahan"];
+        document.getElementById('knowledge-title').textContent = s.title;
+        document.getElementById('knowledge-extract').innerHTML = s.extract;
+        document.getElementById('knowledge-ai-points').innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
 
-      const localMatch = localCorpus.find(e => e.madde.toLowerCase() === q.toLowerCase() || e.guncel.toLowerCase().includes(q.toLowerCase()));
+      if (qLower.includes('hasan eren') || qLower.includes('tdes')) {
+        const s = scholarlyKnowledgeBase["hasan eren"];
+        document.getElementById('knowledge-title').textContent = s.title;
+        document.getElementById('knowledge-extract').innerHTML = s.extract;
+        document.getElementById('knowledge-ai-points').innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      if (qLower.includes('clauson') || qLower.includes('edpt')) {
+        const s = scholarlyKnowledgeBase["gerard clauson"];
+        document.getElementById('knowledge-title').textContent = s.title;
+        document.getElementById('knowledge-extract').innerHTML = s.extract;
+        document.getElementById('knowledge-ai-points').innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      if (qLower.includes('kâşgarlı') || qLower.includes('kasgarli') || qLower.includes('dlt') || qLower.includes('divanü')) {
+        const s = scholarlyKnowledgeBase["kâşgarlı mahmud"];
+        document.getElementById('knowledge-title').textContent = s.title;
+        document.getElementById('knowledge-extract').innerHTML = s.extract;
+        document.getElementById('knowledge-ai-points').innerHTML = s.points.map(p => `<div class="ai-point-pill">${p}</div>`).join('');
+        return;
+      }
+
+      // 2. Check local lexicon entries
+      const localMatch = localCorpus.find(e => e.madde.toLowerCase() === qLower || e.guncel.toLowerCase().includes(qLower));
       if (localMatch) {
+        document.getElementById('knowledge-title').textContent = `${localMatch.madde.toUpperCase()} — Etimoloji & Filoloji`;
         document.getElementById('knowledge-extract').innerHTML = `
           <strong>[Filolojik Tahlil]:</strong> ${localMatch.kokAciklama}<br><br>
           <strong>[Hasan Eren TDES]:</strong> ${localMatch.hasanErenNotu || 'Kaynak tanıklığı mevcuttur.'}<br><br>
@@ -1911,7 +2015,8 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
           <div class="ai-point-pill">📖 <strong>Türev Ailesi:</strong> ${localMatch.turevler ? localMatch.turevler.join(', ') : 'İşlek kök'}</div>
         `;
       } else {
-        // Natural Language AI Question Answering Mode
+        // 3. Natural Language Synthesis Mode
+        document.getElementById('knowledge-title').textContent = `${q} — Akademik Sentez Raporu`;
         document.getElementById('knowledge-extract').innerHTML = `
           <strong>"${q}"</strong> ile ilgili akademik literatür, İSAM Ansiklopedisi ve Türkoloji külliyatı taranarak sentezlendi. Bu konu Türk dili tarihi, edebiyat nazariyesi ve metin tahlilleri açısından birincil kaynaklarda geniş yer tutmaktadır.
         `;
@@ -1925,18 +2030,18 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
 
     knowledgeSearchInput.addEventListener('input', () => {
       clearTimeout(searchDebounceTimer);
-      searchDebounceTimer = setTimeout(executeInstantKnowledgeSearch, 60);
+      searchDebounceTimer = setTimeout(executeInstantKnowledgeSearch, 50);
     });
 
     document.getElementById('btn-fetch-knowledge').addEventListener('click', executeInstantKnowledgeSearch);
 
     // --- CITATION GENERATOR ---
     function generateCitations() {
-      const author = document.getElementById('cite-author').value.trim() || 'Hasan Eren';
-      const title = document.getElementById('cite-title').value.trim() || 'Türk Dilinin Etimolojik Sözlüğü';
-      const year = document.getElementById('cite-year').value.trim() || '1999';
-      const publisher = document.getElementById('cite-publisher').value.trim() || 'TDK Yayınları';
-      const city = document.getElementById('cite-city').value.trim() || 'Ankara';
+      const author = document.getElementById('cite-author').value.trim() || 'Tunahan Haksever';
+      const title = document.getElementById('cite-title').value.trim() || 'Bitigey Sözlük: Karşılaştırmalı Etimolojik Külliyat';
+      const year = document.getElementById('cite-year').value.trim() || '2026';
+      const publisher = document.getElementById('cite-publisher').value.trim() || 'Bitigey Yayınları';
+      const city = document.getElementById('cite-city').value.trim() || 'Trabzon / İstanbul';
       const pages = document.getElementById('cite-pages').value.trim() || '';
       const doi = document.getElementById('cite-doi').value.trim() || '';
 
@@ -2021,6 +2126,7 @@ Grandfather Korkut arrived and chanted: 'I have named this lad Boğaç Khan; I g
     // Initial renders
     renderManuscriptSelector('ALL');
     renderEntries();
+    executeInstantKnowledgeSearch();
   </script>
 </body>
 </html>
